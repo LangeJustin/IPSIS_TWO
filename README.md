@@ -1,5 +1,12 @@
 # Readme
 
+ _____ ____   _______     _______ ___  
+|_   _|  _ \ / ____\ \   / / ____|__ \ 
+  | | | |_) | (___  \ \_/ / (___    ) |
+  | | |  _ < \___ \  \   / \___ \  / / 
+ _| |_| |_) |____) |  | |  ____) |/ /_ 
+|_____|____/|_____/   |_| |_____/|____|
+
 ### Build status
 Branch master:&nbsp; [![Build Status master](https://travis-ci.org/AvariusProject/IbSys2.svg?branch=master)](https://travis-ci.org/AvariusProject/IbSys2)
 
