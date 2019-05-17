@@ -155,6 +155,9 @@ namespace Ibsys2
 
 
             MainpageNextButton.Content = TranslateService.Class.GetTranslation("NEXT");
+            button.Content = TranslateService.Class.GetTranslation("REFRESHCHILD");
+            button1.Content = TranslateService.Class.GetTranslation("REFRESHWOMEN");
+            button2.Content = TranslateService.Class.GetTranslation("REFRESHMAN");
             clear.Content = TranslateService.Class.GetTranslation("CLEAR");
             choosefile.Content = TranslateService.Class.GetTranslation("CHOOSEFILE");
             calculatebutton.Content = TranslateService.Class.GetTranslation("COUNT");
@@ -873,6 +876,8 @@ namespace Ibsys2
             UpdateLager();
         }
 
+        
+
         private void UpdatePlanningFields()
         {
             ValueStore vs = ValueStore.Instance;
@@ -890,7 +895,8 @@ namespace Ibsys2
 
             kind12.Text = Produktionsplanung.p1.ToString();
             kind22.Text = wlw.GetArticleAmountByID(1).ToString();
-            kind32.Text = vs.sicherheitsbestandP1.ToString();
+            kind32.Text = vs.sicherheitsbestandP1e26.ToString();
+            vs.sicherheitsbestandP1e26 = Convert.ToInt32(kind32.Text);
             kind42.Text = (w.GetArticleByID(26).Amount / 3).ToString();
             kind52.Text = (wlw.GetArticleAmountByID(26) / 3).ToString();
             kind62.Text = (oiw.GetArticleAmountByID(26) / 3).ToString();
@@ -898,7 +904,7 @@ namespace Ibsys2
 
             kind13.Text = Produktionsplanung.p1.ToString();
             kind23.Text = wlw.GetArticleAmountByID(1).ToString();
-            kind33.Text = vs.sicherheitsbestandP1.ToString();
+            kind33.Text = vs.sicherheitsbestandP1e51.ToString();
             kind43.Text = w.GetArticleByID(51).Amount.ToString();
             kind53.Text = wlw.GetArticleAmountByID(51).ToString();
             kind63.Text = oiw.GetArticleAmountByID(51).ToString();
@@ -906,7 +912,7 @@ namespace Ibsys2
 
             kind14.Text = Produktionsplanung.e51.ToString();
             kind24.Text = wlw.GetArticleAmountByID(51).ToString();
-            kind34.Text = vs.sicherheitsbestandP1.ToString();
+            kind34.Text = vs.sicherheitsbestandP1e16.ToString();
             kind44.Text = (w.GetArticleByID(16).Amount / 3).ToString();
             kind54.Text = (wlw.GetArticleAmountByID(16) / 3).ToString();
             kind64.Text = (oiw.GetArticleAmountByID(16) / 3).ToString();
@@ -914,7 +920,7 @@ namespace Ibsys2
 
             kind15.Text = Produktionsplanung.e51.ToString();
             kind25.Text = wlw.GetArticleAmountByID(51).ToString();
-            kind35.Text = vs.sicherheitsbestandP1.ToString();
+            kind35.Text = vs.sicherheitsbestandP1e17.ToString();
             kind45.Text = (w.GetArticleByID(17).Amount / 3).ToString();
             kind55.Text = (wlw.GetArticleAmountByID(17) / 3).ToString();
             kind65.Text = (oiw.GetArticleAmountByID(17) / 3).ToString();
@@ -922,7 +928,7 @@ namespace Ibsys2
 
             kind16.Text = Produktionsplanung.e51.ToString();
             kind26.Text = wlw.GetArticleAmountByID(51).ToString();
-            kind36.Text = vs.sicherheitsbestandP1.ToString();
+            kind36.Text = vs.sicherheitsbestandP1e50.ToString();
             kind46.Text = w.GetArticleByID(50).Amount.ToString();
             kind56.Text = wlw.GetArticleAmountByID(50).ToString();
             kind66.Text = oiw.GetArticleAmountByID(50).ToString();
@@ -930,7 +936,7 @@ namespace Ibsys2
 
             kind17.Text = Produktionsplanung.e50.ToString();
             kind27.Text = wlw.GetArticleAmountByID(50).ToString();
-            kind37.Text = vs.sicherheitsbestandP1.ToString();
+            kind37.Text = vs.sicherheitsbestandP1e4.ToString();
             kind47.Text = w.GetArticleByID(4).Amount.ToString();
             kind57.Text = wlw.GetArticleAmountByID(4).ToString();
             kind67.Text = oiw.GetArticleAmountByID(4).ToString();
@@ -938,7 +944,7 @@ namespace Ibsys2
 
             kind18.Text = Produktionsplanung.e50.ToString();
             kind28.Text = wlw.GetArticleAmountByID(50).ToString();
-            kind38.Text = vs.sicherheitsbestandP1.ToString();
+            kind38.Text = vs.sicherheitsbestandP1e10.ToString();
             kind48.Text = w.GetArticleByID(10).Amount.ToString();
             kind58.Text = wlw.GetArticleAmountByID(10).ToString();
             kind68.Text = oiw.GetArticleAmountByID(10).ToString();
@@ -946,7 +952,7 @@ namespace Ibsys2
 
             kind19.Text = Produktionsplanung.e50.ToString();
             kind29.Text = wlw.GetArticleAmountByID(50).ToString();
-            kind39.Text = vs.sicherheitsbestandP1.ToString();
+            kind39.Text = vs.sicherheitsbestandP1e49.ToString();
             kind49.Text = w.GetArticleByID(49).Amount.ToString();
             kind59.Text = wlw.GetArticleAmountByID(49).ToString();
             kind69.Text = oiw.GetArticleAmountByID(49).ToString();
@@ -954,7 +960,7 @@ namespace Ibsys2
 
             kind110.Text = Produktionsplanung.e49.ToString();
             kind210.Text = wlw.GetArticleAmountByID(49).ToString();
-            kind310.Text = vs.sicherheitsbestandP1.ToString();
+            kind310.Text = vs.sicherheitsbestandP1e7.ToString();
             kind410.Text = w.GetArticleByID(7).Amount.ToString();
             kind510.Text = wlw.GetArticleAmountByID(7).ToString();
             kind610.Text = oiw.GetArticleAmountByID(7).ToString();
@@ -962,7 +968,7 @@ namespace Ibsys2
 
             kind111.Text = Produktionsplanung.e49.ToString();
             kind211.Text = wlw.GetArticleAmountByID(49).ToString();
-            kind311.Text = vs.sicherheitsbestandP1.ToString();
+            kind311.Text = vs.sicherheitsbestandP1e13.ToString();
             kind411.Text = w.GetArticleByID(13).Amount.ToString();
             kind511.Text = wlw.GetArticleAmountByID(13).ToString();
             kind611.Text = oiw.GetArticleAmountByID(13).ToString();
@@ -970,7 +976,7 @@ namespace Ibsys2
 
             kind112.Text = Produktionsplanung.e49.ToString();
             kind212.Text = wlw.GetArticleAmountByID(49).ToString();
-            kind312.Text = vs.sicherheitsbestandP1.ToString();
+            kind312.Text = vs.sicherheitsbestandP1e18.ToString();
             kind412.Text = w.GetArticleByID(18).Amount.ToString();
             kind512.Text = wlw.GetArticleAmountByID(18).ToString();
             kind612.Text = oiw.GetArticleAmountByID(18).ToString();
@@ -987,7 +993,7 @@ namespace Ibsys2
 
             damen12.Text = Produktionsplanung.p2.ToString();
             damen22.Text = wlw.GetArticleAmountByID(2).ToString();
-            damen32.Text = vs.sicherheitsbestandP2.ToString();
+            damen32.Text = vs.sicherheitsbestandP2e26.ToString();
             damen42.Text = (w.GetArticleByID(26).Amount / 3).ToString();
             damen52.Text = (wlw.GetArticleAmountByID(26) / 3).ToString();
             damen62.Text = (oiw.GetArticleAmountByID(26) / 3).ToString();
@@ -995,7 +1001,7 @@ namespace Ibsys2
 
             damen13.Text = Produktionsplanung.p2.ToString();
             damen23.Text = wlw.GetArticleAmountByID(2).ToString();
-            damen33.Text = vs.sicherheitsbestandP2.ToString();
+            damen33.Text = vs.sicherheitsbestandP2e56.ToString();
             damen43.Text = w.GetArticleByID(56).Amount.ToString();
             damen53.Text = wlw.GetArticleAmountByID(56).ToString();
             damen63.Text = oiw.GetArticleAmountByID(56).ToString();
@@ -1003,7 +1009,7 @@ namespace Ibsys2
 
             damen14.Text = Produktionsplanung.e56.ToString();
             damen24.Text = wlw.GetArticleAmountByID(56).ToString();
-            damen34.Text = vs.sicherheitsbestandP2.ToString();
+            damen34.Text = vs.sicherheitsbestandP2e16.ToString();
             damen44.Text = (w.GetArticleByID(16).Amount / 3).ToString();
             damen54.Text = (wlw.GetArticleAmountByID(16) / 3).ToString();
             damen64.Text = (oiw.GetArticleAmountByID(16) / 3).ToString();
@@ -1011,7 +1017,7 @@ namespace Ibsys2
 
             damen15.Text = Produktionsplanung.e56.ToString();
             damen25.Text = wlw.GetArticleAmountByID(56).ToString();
-            damen35.Text = vs.sicherheitsbestandP2.ToString();
+            damen35.Text = vs.sicherheitsbestandP2e17.ToString();
             damen45.Text = (w.GetArticleByID(17).Amount / 3).ToString();
             damen55.Text = (wlw.GetArticleAmountByID(17) / 3).ToString();
             damen65.Text = (oiw.GetArticleAmountByID(17) / 3).ToString();
@@ -1019,7 +1025,7 @@ namespace Ibsys2
 
             damen16.Text = Produktionsplanung.e56.ToString();
             damen26.Text = wlw.GetArticleAmountByID(56).ToString();
-            damen36.Text = vs.sicherheitsbestandP2.ToString();
+            damen36.Text = vs.sicherheitsbestandP2e55.ToString();
             damen46.Text = w.GetArticleByID(55).Amount.ToString();
             damen56.Text = wlw.GetArticleAmountByID(55).ToString();
             damen66.Text = oiw.GetArticleAmountByID(55).ToString();
@@ -1027,7 +1033,7 @@ namespace Ibsys2
 
             damen17.Text = Produktionsplanung.e55.ToString();
             damen27.Text = wlw.GetArticleAmountByID(55).ToString();
-            damen37.Text = vs.sicherheitsbestandP2.ToString();
+            damen37.Text = vs.sicherheitsbestandP2e5.ToString();
             damen47.Text = w.GetArticleByID(5).Amount.ToString();
             damen57.Text = wlw.GetArticleAmountByID(5).ToString();
             damen67.Text = oiw.GetArticleAmountByID(5).ToString();
@@ -1035,7 +1041,7 @@ namespace Ibsys2
 
             damen18.Text = Produktionsplanung.e55.ToString();
             damen28.Text = wlw.GetArticleAmountByID(55).ToString();
-            damen38.Text = vs.sicherheitsbestandP2.ToString();
+            damen38.Text = vs.sicherheitsbestandP2e11.ToString();
             damen48.Text = w.GetArticleByID(11).Amount.ToString();
             damen58.Text = wlw.GetArticleAmountByID(11).ToString();
             damen68.Text = oiw.GetArticleAmountByID(11).ToString();
@@ -1043,7 +1049,7 @@ namespace Ibsys2
 
             damen19.Text = Produktionsplanung.e55.ToString();
             damen29.Text = wlw.GetArticleAmountByID(55).ToString();
-            damen39.Text = vs.sicherheitsbestandP2.ToString();
+            damen39.Text = vs.sicherheitsbestandP2e54.ToString();
             damen49.Text = w.GetArticleByID(54).Amount.ToString();
             damen59.Text = wlw.GetArticleAmountByID(54).ToString();
             damen69.Text = oiw.GetArticleAmountByID(54).ToString();
@@ -1051,7 +1057,7 @@ namespace Ibsys2
 
             damen110.Text = Produktionsplanung.e54.ToString();
             damen210.Text = wlw.GetArticleAmountByID(54).ToString();
-            damen310.Text = vs.sicherheitsbestandP2.ToString();
+            damen310.Text = vs.sicherheitsbestandP2e8.ToString();
             damen410.Text = w.GetArticleByID(8).Amount.ToString();
             damen510.Text = wlw.GetArticleAmountByID(8).ToString();
             damen610.Text = oiw.GetArticleAmountByID(8).ToString();
@@ -1059,7 +1065,7 @@ namespace Ibsys2
 
             damen111.Text = Produktionsplanung.e54.ToString();
             damen211.Text = wlw.GetArticleAmountByID(54).ToString();
-            damen311.Text = vs.sicherheitsbestandP2.ToString();
+            damen311.Text = vs.sicherheitsbestandP2e14.ToString();
             damen411.Text = w.GetArticleByID(14).Amount.ToString();
             damen511.Text = wlw.GetArticleAmountByID(14).ToString();
             damen611.Text = oiw.GetArticleAmountByID(14).ToString();
@@ -1067,7 +1073,7 @@ namespace Ibsys2
 
             damen112.Text = Produktionsplanung.e54.ToString();
             damen212.Text = wlw.GetArticleAmountByID(54).ToString();
-            damen312.Text = vs.sicherheitsbestandP2.ToString();
+            damen312.Text = vs.sicherheitsbestandP2e19.ToString();
             damen412.Text = w.GetArticleByID(19).Amount.ToString();
             damen512.Text = wlw.GetArticleAmountByID(19).ToString();
             damen612.Text = oiw.GetArticleAmountByID(19).ToString();
@@ -1084,7 +1090,7 @@ namespace Ibsys2
 
             herren12.Text = Produktionsplanung.p3.ToString();
             herren22.Text = wlw.GetArticleAmountByID(3).ToString();
-            herren32.Text = vs.sicherheitsbestandP2.ToString();
+            herren32.Text = vs.sicherheitsbestandP3e26.ToString();
             herren42.Text = (w.GetArticleByID(26).Amount / 3).ToString();
             herren52.Text = (wlw.GetArticleAmountByID(26) / 3).ToString();
             herren62.Text = (oiw.GetArticleAmountByID(26) / 3).ToString();
@@ -1092,7 +1098,7 @@ namespace Ibsys2
 
             herren13.Text = Produktionsplanung.p3.ToString();
             herren23.Text = wlw.GetArticleAmountByID(3).ToString();
-            herren33.Text = vs.sicherheitsbestandP2.ToString();
+            herren33.Text = vs.sicherheitsbestandP3e31.ToString();
             herren43.Text = w.GetArticleByID(31).Amount.ToString();
             herren53.Text = wlw.GetArticleAmountByID(31).ToString();
             herren63.Text = oiw.GetArticleAmountByID(31).ToString();
@@ -1100,7 +1106,7 @@ namespace Ibsys2
 
             herren14.Text = Produktionsplanung.e31.ToString();
             herren24.Text = wlw.GetArticleAmountByID(31).ToString();
-            herren34.Text = vs.sicherheitsbestandP2.ToString();
+            herren34.Text = vs.sicherheitsbestandP3e16.ToString();
             herren44.Text = (w.GetArticleByID(16).Amount / 3).ToString();
             herren54.Text = (wlw.GetArticleAmountByID(16) / 3).ToString();
             herren64.Text = (oiw.GetArticleAmountByID(16) / 3).ToString();
@@ -1108,7 +1114,7 @@ namespace Ibsys2
 
             herren15.Text = Produktionsplanung.e31.ToString();
             herren25.Text = wlw.GetArticleAmountByID(31).ToString();
-            herren35.Text = vs.sicherheitsbestandP2.ToString();
+            herren35.Text = vs.sicherheitsbestandP3e17.ToString();
             herren45.Text = (w.GetArticleByID(17).Amount / 3).ToString();
             herren55.Text = (wlw.GetArticleAmountByID(17) / 3).ToString();
             herren65.Text = (oiw.GetArticleAmountByID(17) / 3).ToString();
@@ -1116,7 +1122,7 @@ namespace Ibsys2
 
             herren16.Text = Produktionsplanung.e31.ToString();
             herren26.Text = wlw.GetArticleAmountByID(31).ToString();
-            herren36.Text = vs.sicherheitsbestandP2.ToString();
+            herren36.Text = vs.sicherheitsbestandP3e30.ToString();
             herren46.Text = w.GetArticleByID(30).Amount.ToString();
             herren56.Text = wlw.GetArticleAmountByID(30).ToString();
             herren66.Text = oiw.GetArticleAmountByID(30).ToString();
@@ -1124,7 +1130,7 @@ namespace Ibsys2
 
             herren17.Text = Produktionsplanung.e30.ToString();
             herren27.Text = wlw.GetArticleAmountByID(30).ToString();
-            herren37.Text = vs.sicherheitsbestandP2.ToString();
+            herren37.Text = vs.sicherheitsbestandP3e6.ToString();
             herren47.Text = w.GetArticleByID(6).Amount.ToString();
             herren57.Text = wlw.GetArticleAmountByID(6).ToString();
             herren67.Text = oiw.GetArticleAmountByID(6).ToString();
@@ -1132,7 +1138,7 @@ namespace Ibsys2
 
             herren18.Text = Produktionsplanung.e30.ToString();
             herren28.Text = wlw.GetArticleAmountByID(30).ToString();
-            herren38.Text = vs.sicherheitsbestandP2.ToString();
+            herren38.Text = vs.sicherheitsbestandP3e12.ToString();
             herren48.Text = w.GetArticleByID(12).Amount.ToString();
             herren58.Text = wlw.GetArticleAmountByID(12).ToString();
             herren68.Text = oiw.GetArticleAmountByID(12).ToString();
@@ -1140,7 +1146,7 @@ namespace Ibsys2
 
             herren19.Text = Produktionsplanung.e30.ToString();
             herren29.Text = wlw.GetArticleAmountByID(30).ToString();
-            herren39.Text = vs.sicherheitsbestandP2.ToString();
+            herren39.Text = vs.sicherheitsbestandP3e29.ToString();
             herren49.Text = w.GetArticleByID(29).Amount.ToString();
             herren59.Text = wlw.GetArticleAmountByID(29).ToString();
             herren69.Text = oiw.GetArticleAmountByID(29).ToString();
@@ -1148,7 +1154,7 @@ namespace Ibsys2
 
             herren110.Text = Produktionsplanung.e29.ToString();
             herren210.Text = wlw.GetArticleAmountByID(29).ToString();
-            herren310.Text = vs.sicherheitsbestandP2.ToString();
+            herren310.Text = vs.sicherheitsbestandP3e9.ToString();
             herren410.Text = w.GetArticleByID(9).Amount.ToString();
             herren510.Text = wlw.GetArticleAmountByID(9).ToString();
             herren610.Text = oiw.GetArticleAmountByID(9).ToString();
@@ -1156,7 +1162,7 @@ namespace Ibsys2
 
             herren111.Text = Produktionsplanung.e29.ToString();
             herren211.Text = wlw.GetArticleAmountByID(29).ToString();
-            herren311.Text = vs.sicherheitsbestandP2.ToString();
+            herren311.Text = vs.sicherheitsbestandP3e15.ToString();
             herren411.Text = w.GetArticleByID(15).Amount.ToString();
             herren511.Text = wlw.GetArticleAmountByID(15).ToString();
             herren611.Text = oiw.GetArticleAmountByID(15).ToString();
@@ -1164,7 +1170,7 @@ namespace Ibsys2
 
             herren112.Text = Produktionsplanung.e29.ToString();
             herren212.Text = wlw.GetArticleAmountByID(29).ToString();
-            herren312.Text = vs.sicherheitsbestandP2.ToString();
+            herren312.Text = vs.sicherheitsbestandP3e20.ToString();
             herren412.Text = w.GetArticleByID(20).Amount.ToString();
             herren512.Text = wlw.GetArticleAmountByID(20).ToString();
             herren612.Text = oiw.GetArticleAmountByID(20).ToString();
@@ -1736,6 +1742,102 @@ namespace Ibsys2
 
         private void openFinderButton_Click(object sender, RoutedEventArgs e)
         {
+
+        }
+
+        private void Kind11_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Kind23_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Kind31_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            //ValueStore vs = ValueStore.Instance;
+            //vs.sicherheitsbestandP1 = Convert.ToInt32(kind31.Text);
+            //UpdatePlanningFields();
+        }
+
+        private void Kind71_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            ValueStore vs = ValueStore.Instance;
+            vs.sicherheitsbestandP1 = Convert.ToInt32(kind31.Text);
+            vs.sicherheitsbestandP1e26 = Convert.ToInt32(kind32.Text);
+            vs.sicherheitsbestandP1e51 = Convert.ToInt32(kind33.Text);
+            vs.sicherheitsbestandP1e16 = Convert.ToInt32(kind34.Text);
+            vs.sicherheitsbestandP1e17 = Convert.ToInt32(kind35.Text);
+            vs.sicherheitsbestandP1e50 = Convert.ToInt32(kind36.Text);
+            vs.sicherheitsbestandP1e4 = Convert.ToInt32(kind37.Text);
+            vs.sicherheitsbestandP1e10 = Convert.ToInt32(kind38.Text);
+            vs.sicherheitsbestandP1e49 = Convert.ToInt32(kind39.Text);
+            vs.sicherheitsbestandP1e7 = Convert.ToInt32(kind310.Text);
+            vs.sicherheitsbestandP1e13 = Convert.ToInt32(kind311.Text);
+            vs.sicherheitsbestandP1e18 = Convert.ToInt32(kind312.Text);
+            vs.sicherheitsbestandP3 = Convert.ToInt32(herren31.Text);
+            vs.sicherheitsbestandP3e26 = Convert.ToInt32(herren32.Text);
+            vs.sicherheitsbestandP3e31 = Convert.ToInt32(herren33.Text);
+            vs.sicherheitsbestandP3e16 = Convert.ToInt32(herren34.Text);
+            vs.sicherheitsbestandP3e17 = Convert.ToInt32(herren35.Text);
+            vs.sicherheitsbestandP3e30 = Convert.ToInt32(herren36.Text);
+            vs.sicherheitsbestandP3e6 = Convert.ToInt32(herren37.Text);
+            vs.sicherheitsbestandP3e12 = Convert.ToInt32(herren38.Text);
+            vs.sicherheitsbestandP3e29 = Convert.ToInt32(herren39.Text);
+            vs.sicherheitsbestandP3e9 = Convert.ToInt32(herren310.Text);
+            vs.sicherheitsbestandP3e15 = Convert.ToInt32(herren311.Text);
+            vs.sicherheitsbestandP3e20 = Convert.ToInt32(herren312.Text);
+
+
+            Produktionsplanung.berechnen();
+            UpdatePlanningFields();
+        }
+
+        private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+            ValueStore vs = ValueStore.Instance;
+            vs.sicherheitsbestandP2 = Convert.ToInt32(damen31.Text);
+            vs.sicherheitsbestandP2e26 = Convert.ToInt32(damen32.Text);
+            vs.sicherheitsbestandP2e56 = Convert.ToInt32(damen33.Text);
+            vs.sicherheitsbestandP2e16 = Convert.ToInt32(damen34.Text);
+            vs.sicherheitsbestandP2e17 = Convert.ToInt32(damen35.Text);
+            vs.sicherheitsbestandP2e55 = Convert.ToInt32(damen36.Text);
+            vs.sicherheitsbestandP2e5 = Convert.ToInt32(damen37.Text);
+            vs.sicherheitsbestandP2e11 = Convert.ToInt32(damen38.Text);
+            vs.sicherheitsbestandP2e54 = Convert.ToInt32(damen39.Text);
+            vs.sicherheitsbestandP2e8 = Convert.ToInt32(damen310.Text);
+            vs.sicherheitsbestandP2e14 = Convert.ToInt32(damen311.Text);
+            vs.sicherheitsbestandP2e19 = Convert.ToInt32(damen312.Text);
+
+            Produktionsplanung.berechnen();
+            UpdatePlanningFields();
+        }
+
+        private void Button2_Click(object sender, RoutedEventArgs e)
+        {
+            ValueStore vs = ValueStore.Instance;
+            vs.sicherheitsbestandP3 = Convert.ToInt32(herren31.Text);
+            vs.sicherheitsbestandP3e26 = Convert.ToInt32(herren32.Text);
+            vs.sicherheitsbestandP3e31 = Convert.ToInt32(herren33.Text);
+            vs.sicherheitsbestandP3e16 = Convert.ToInt32(herren34.Text);
+            vs.sicherheitsbestandP3e17 = Convert.ToInt32(herren35.Text);
+            vs.sicherheitsbestandP3e30 = Convert.ToInt32(herren36.Text);
+            vs.sicherheitsbestandP3e6 = Convert.ToInt32(herren37.Text);
+            vs.sicherheitsbestandP3e12 = Convert.ToInt32(herren38.Text);
+            vs.sicherheitsbestandP3e29 = Convert.ToInt32(herren39.Text);
+            vs.sicherheitsbestandP3e9 = Convert.ToInt32(herren310.Text);
+            vs.sicherheitsbestandP3e15 = Convert.ToInt32(herren311.Text);
+            vs.sicherheitsbestandP3e20 = Convert.ToInt32(herren312.Text);
+
+            Produktionsplanung.berechnen();
+            UpdatePlanningFields();
 
         }
     }
