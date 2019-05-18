@@ -208,7 +208,7 @@ namespace Ibsys2.Service {
             _translate.Add("BIKETYPE", "Type of bike");
             _translate.Add("INDIVIDUAL_EFFORT", "Individual effort");
             _translate.Add("KAPA", "Capacity planning");
-            _translate.Add("TYPE", "Type");
+            _translate.Add("TYPE", "rush order");
             _translate.Add("DEL", "delete");
             _translate.Add("ADD", "add");
             _translate.Add("SPLIT", "split");

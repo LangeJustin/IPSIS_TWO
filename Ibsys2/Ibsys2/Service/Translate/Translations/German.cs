@@ -208,7 +208,7 @@ namespace Ibsys2.Service {
             _translate.Add("BIKETYPE", "Fahrradtyp");
             _translate.Add("INDIVIDUAL_EFFORT", "Einzelaufwand");
             _translate.Add("KAPA", "Kapazitätsplan");
-            _translate.Add("TYPE", "Typ");
+            _translate.Add("TYPE", "Eilbestellung");
             _translate.Add("DEL", "löschen");
             _translate.Add("ADD", "hinzufügen");
             _translate.Add("SPLIT", "teilen");
