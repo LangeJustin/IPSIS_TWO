@@ -21,7 +21,7 @@
             <ColumnDefinition Width="341*"/>
         </Grid.ColumnDefinitions>
 
-        <Menu Grid.ColumnSpan="2" Margin="0,0,-0.4,0.4" IsEnabled="False" Background="#FF5F9297">
+        <Menu Grid.ColumnSpan="2" Margin="0,0,-0.4,0.4" IsEnabled="True" Background="#FF5F9297">
             <MenuItem x:Name="Programm" Header="Programm">
                 <MenuItem x:Name="Helpmenuitem" Header="Help" Click="Helpmenuitem_Click"/>
                 <MenuItem x:Name="Closemenuitem" Header="Close" Click="Closemenuitem_Click"/>

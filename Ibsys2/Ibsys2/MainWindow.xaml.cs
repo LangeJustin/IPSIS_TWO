@@ -1216,7 +1216,8 @@ namespace Ibsys2
             fields.Clear();
             foreach (var item in Orderlist.Class.Liste)
             {
-                fields.Add(new Einkauf(item.Article.ToString(), item.Quantity.ToString(), item.Modus.ToString()));
+        // TODO
+        fields.Add(new Einkauf(item.Article.ToString(), item.Quantity.ToString(), item.Modus.ToString()));
             }
             /*
             dataGrid31.Columns[0].IsReadOnly = true;
