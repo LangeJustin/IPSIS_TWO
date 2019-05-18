@@ -1300,11 +1300,11 @@
                                     <ColumnDefinition Width="446*"/>
                                     <ColumnDefinition Width="717*"/>
                                 </Grid.ColumnDefinitions>
-                                <DataGrid Name="dataGrid31" Margin="2" CellEditEnding="UpdateEinkaufXML"  AutoGenerateColumns="False" IsReadOnly="True" Background="#FF8CDCE4" Grid.ColumnSpan="2">
+                                <DataGrid Name="dataGrid31" Margin="2" CellEditEnding="UpdateEinkaufXML"  AutoGenerateColumns="False" IsReadOnly="False" Background="#FF8CDCE4" Grid.ColumnSpan="2">
                                     <DataGrid.Columns >
-                                        <DataGridTextColumn x:Name="Bestell1_Teileno" Header="Dummy" Binding="{Binding Teileno}"></DataGridTextColumn>
+                                        <DataGridTextColumn x:Name="Bestell1_Teileno" Header="Dummy" IsReadOnly="True" Binding="{Binding Teileno}"></DataGridTextColumn>
                                         <DataGridTextColumn x:Name="Bestell1_Anzahl" Header="Last Name" Binding="{Binding Anzahl}"></DataGridTextColumn>
-                                        <DataGridTextColumn x:Name="Bestell1_Art" Header="Last Name" Binding="{Binding Art}"></DataGridTextColumn>
+                    <DataGridTextColumn x:Name="Bestell1_Art" Header="Last Name" Binding="{Binding Art}"></DataGridTextColumn>
                                     </DataGrid.Columns>
                                 </DataGrid>
                             </Grid>
@@ -1381,7 +1381,7 @@
                 </TabItem.Background>
                 <Grid Background="#FF8CDCE4">
                     <Button x:Name="xmlexportbutton" Content="XML Export" HorizontalAlignment="Left" Margin="131,132,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" IsEnabled="False"/>
-                    <TextBox x:Name="customexportpathtextbox" HorizontalAlignment="Left" Height="23" Margin="86,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" TextChanged="customexportpathtextbox_TextChanged"/>
+                    <TextBox x:Name="customexportpathtextbox" HorizontalAlignment="Left" Height="23" Margin="86,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="True" TextChanged="customexportpathtextbox_TextChanged"/>
                     <Label x:Name="Exportlabel" Content="Exportpath:" HorizontalAlignment="Left" Margin="10,101,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.178,-0.403"/>
                 </Grid>
             </TabItem>
