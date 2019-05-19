@@ -1304,7 +1304,7 @@
                                     <DataGrid.Columns >
                                         <DataGridTextColumn x:Name="Bestell1_Teileno" Header="Dummy" IsReadOnly="True" Binding="{Binding Teileno}"></DataGridTextColumn>
                                         <DataGridTextColumn x:Name="Bestell1_Anzahl" Header="Last Name" Binding="{Binding Anzahl}"></DataGridTextColumn>
-                    <DataGridCheckBoxColumn x:Name="Bestell1_Art" Header="Last Name" Binding="{Binding Art}"></DataGridCheckBoxColumn>
+                                        <DataGridComboBoxColumn x:Name="Bestell1_Art" Header="Last Name" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValueBinding="{Binding Art}"></DataGridComboBoxColumn>
                                     </DataGrid.Columns>
                                 </DataGrid>
                             </Grid>

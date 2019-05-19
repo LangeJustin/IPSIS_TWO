@@ -474,6 +474,11 @@ namespace Ibsys2
             dataGrid29.ItemsSource = CreateWorkPlan16();
             dataGrid30.ItemsSource = CreateLiefer1();
             dataGrid31.ItemsSource = CreateEinkauf1();
+            DataGridComboBoxColumn col = dataGrid31.Columns[2] as DataGridComboBoxColumn;
+            Dictionary<string, string> ds = new Dictionary<string, string>();
+            ds.Add("Normal", "5");
+            ds.Add("Eil", "4");
+            col.ItemsSource = ds;
             dataGrid32.ItemsSource = CreateLagerbestand();
             prio.ItemsSource = CreatePrio1();
         }
@@ -1625,19 +1630,21 @@ namespace Ibsys2
                     var row = (Einkauf)e.Row.Item;
                     var colum = (string)e.Column.Header;
                     var item = Orderlist.Class.GetOrdersByArticle(Convert.ToInt32(Regex.Replace(row.Teileno, "[^0-9]+", string.Empty))).Find(x => x.Modus == Convert.ToInt32(Regex.Replace(row.Art, "[^0-9]+", string.Empty)) && x.Quantity == Convert.ToInt32(Regex.Replace(row.Anzahl, "[^0-9]+", string.Empty)));
-                    if (colum == TranslateService.Class.GetTranslation("MODE"))
+                    if (colum == TranslateService.Class.GetTranslation("MODE")) {
                         item.Modus = field;
-                    else if (colum == TranslateService.Class.GetTranslation("QUANTITY"))
+                    } else if (colum == TranslateService.Class.GetTranslation("QUANTITY")) {
                         item.Quantity = field;
-                    else
-                    {
-                        if (colum == "Art")
-                            item.Modus = field;
-                        else if (colum == "Anzahl") 
-                            item.Quantity = field;
-                        else { throw new Exception(); }
+                    } else  {
+                      if (colum == "Art") {
+                          item.Modus = field;
+                      }
+                      else if (colum == "Anzahl") {
+                          item.Quantity = field;
+                      }
+                      else {
+                        throw new Exception();
+                      }
                     }
-
                 }
                 catch { e.Cancel = true; }
             }
@@ -2147,11 +2154,8 @@ public class Einkauf : INotifyPropertyChanged
         get { return art; }
         set
         {
-            if (Convert.ToInt32(value) == 5)
-                art = TranslateService.Class.GetTranslation("NORMAL") + " (" + value + ")";
-            else if (Convert.ToInt32(value) == 4)
-                art = TranslateService.Class.GetTranslation("EIL") + " (" + value + ")";
-            OnPropertyChanged(new PropertyChangedEventArgs("Art"));
+          art = value;
+          OnPropertyChanged(new PropertyChangedEventArgs("Art"));
         }
     }
     protected void OnPropertyChanged(PropertyChangedEventArgs e)
