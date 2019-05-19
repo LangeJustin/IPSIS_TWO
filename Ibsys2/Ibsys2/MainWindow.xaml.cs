@@ -1221,7 +1221,6 @@ namespace Ibsys2
             fields.Clear();
             foreach (var item in Orderlist.Class.Liste)
             {
-        // TODO
         fields.Add(new Einkauf(item.Article.ToString(), item.Quantity.ToString(), item.Modus.ToString()));
             }
             /*

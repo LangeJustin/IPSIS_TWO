@@ -14,7 +14,6 @@ namespace Ibsys2.Berechnungen.Logic {
       bp.bestellungenBerechnen();
 
       foreach (BPBestellung bestellung in bp.bestellungen) {
-        // TODO: Eilbestellung CheckBox
         ol.AddItem(new OrderlistItem(bestellung.artikelID, Convert.ToInt32(bestellung.menge), bestellung.isEilbestellung ? 4 : 5));
 
       }
