@@ -14,7 +14,9 @@ namespace Ibsys2.Service {
         }
 
         private static void Translate() {
-            _translate.Add("HELLO", "Hallo");
+      _translate.Add("EILBESTELLUNG", "Eilbestellung");
+      _translate.Add("NORMALBESTELLUNG", "Normalbestellung");
+      _translate.Add("HELLO", "Hallo");
             _translate.Add("REFRESHCHILD", "aktualisieren");
             _translate.Add("REFRESHWOMEN", "aktualisieren");
             _translate.Add("REFRESHMAN", "aktualisieren");

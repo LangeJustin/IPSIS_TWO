@@ -476,8 +476,8 @@ namespace Ibsys2
             dataGrid31.ItemsSource = CreateEinkauf1();
             DataGridComboBoxColumn col = dataGrid31.Columns[2] as DataGridComboBoxColumn;
             Dictionary<string, string> ds = new Dictionary<string, string>();
-            ds.Add("Normal", "5");
-            ds.Add("Eil", "4");
+            ds.Add(TranslateService.Class.GetTranslation("NORMALBESTELLUNG"), "5");
+            ds.Add(TranslateService.Class.GetTranslation("EILBESTELLUNG"), "4");
             col.ItemsSource = ds;
             dataGrid32.ItemsSource = CreateLagerbestand();
             prio.ItemsSource = CreatePrio1();
