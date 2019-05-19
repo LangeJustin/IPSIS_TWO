@@ -414,7 +414,7 @@ namespace Ibsys2
 
             Bestell1_Teileno.Header = TranslateService.Class.GetTranslation("ITEM_NO");
             Bestell1_Anzahl.Header = TranslateService.Class.GetTranslation("QUANTITY");
-            Bestell1_Art.Header = TranslateService.Class.GetTranslation("TYPE");
+            Bestell1_Art.Header = TranslateService.Class.GetTranslation("MODE");
             add.Content = TranslateService.Class.GetTranslation("ADD");
             delete.Content = TranslateService.Class.GetTranslation("DEL");
             split.Content = TranslateService.Class.GetTranslation("SPLIT");
@@ -1626,7 +1626,14 @@ namespace Ibsys2
             {
                 try
                 {
-                    var field = Convert.ToInt32(Regex.Replace(((TextBox)e.EditingElement).Text, "[^0-9]+", string.Empty));
+                    FrameworkElement eee = e.EditingElement;
+                    string fieldText = null;
+                    if (eee is TextBox) {
+                      fieldText = ((TextBox)eee).Text;
+                    } else if (eee is ComboBox) {
+                      fieldText = ((ComboBox)eee).SelectedValue.ToString();
+                    }
+                    var field = Convert.ToInt32(Regex.Replace(fieldText, "[^0-9]+", string.Empty));
                     var row = (Einkauf)e.Row.Item;
                     var colum = (string)e.Column.Header;
                     var item = Orderlist.Class.GetOrdersByArticle(Convert.ToInt32(Regex.Replace(row.Teileno, "[^0-9]+", string.Empty))).Find(x => x.Modus == Convert.ToInt32(Regex.Replace(row.Art, "[^0-9]+", string.Empty)) && x.Quantity == Convert.ToInt32(Regex.Replace(row.Anzahl, "[^0-9]+", string.Empty)));
