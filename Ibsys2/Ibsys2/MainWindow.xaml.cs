@@ -1594,7 +1594,8 @@ namespace Ibsys2 {
       vs.sicherheitsbestandP3e15 = Convert.ToInt32(herren311.Text);
       vs.sicherheitsbestandP3e20 = Convert.ToInt32(herren312.Text);
 
-      Produktionsplanung.berechnen();
+      new Ibsys2.Berechnungen.Logic.Berechnungen().berechnen();
+      //Produktionsplanung.berechnen();
       UpdatePlanningFields();
     }
 
@@ -1613,7 +1614,8 @@ namespace Ibsys2 {
       vs.sicherheitsbestandP2e14 = Convert.ToInt32(damen311.Text);
       vs.sicherheitsbestandP2e19 = Convert.ToInt32(damen312.Text);
 
-      Produktionsplanung.berechnen();
+      new Ibsys2.Berechnungen.Logic.Berechnungen().berechnen();
+      //Produktionsplanung.berechnen();
       UpdatePlanningFields();
     }
 
@@ -1632,7 +1634,8 @@ namespace Ibsys2 {
       vs.sicherheitsbestandP3e15 = Convert.ToInt32(herren311.Text);
       vs.sicherheitsbestandP3e20 = Convert.ToInt32(herren312.Text);
 
-      Produktionsplanung.berechnen();
+      new Ibsys2.Berechnungen.Logic.Berechnungen().berechnen();
+      //Produktionsplanung.berechnen();
       UpdatePlanningFields();
     }
   }

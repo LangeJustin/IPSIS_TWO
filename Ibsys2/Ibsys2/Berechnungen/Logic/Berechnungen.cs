@@ -9,6 +9,7 @@ namespace Ibsys2.Berechnungen.Logic {
   public class Berechnungen {
 
     private static void createOrderList() {
+      Orderlist.Reset();
       Orderlist ol = Orderlist.Class;
       Bestellplanung bp = new Bestellplanung();
       bp.bestellungenBerechnen();
@@ -20,6 +21,7 @@ namespace Ibsys2.Berechnungen.Logic {
     }
 
     private static void createProductionList() {
+      Productionlist.Reset();
       Productionlist pl = Productionlist.Class;
       Produktionsplanung.berechnen();
       for (int i = 1; i < 21; i++) {
@@ -43,6 +45,7 @@ namespace Ibsys2.Berechnungen.Logic {
     }
 
     private static void createWorkingtimelist() {
+      Workingtimelist.Reset();
       Workingtimelist wl = Workingtimelist.Class;
       Kapazitaetsplanung.Class.kapazitaetsrueckstandAufNachfolgendeArbeitsplaetzeVerrechnen();
       foreach (Arbeitsplatz a in Kapazitaetsplanung.Class.arbeitsplatzListe) {
