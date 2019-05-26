@@ -180,7 +180,7 @@ namespace Ibsys2.Service {
             _translate.Add("NEXT", "Weiter");
             _translate.Add("CLEAR", "Zurücksetzen");
             _translate.Add("CHOOSEFILE", "Datei wählen");
-            _translate.Add("COUNT", "Berechne");
+            _translate.Add("COUNT", "Berechnen");
             _translate.Add("PROGRAM","Programm");
             _translate.Add("HELP", "Hilfe");
             _translate.Add("CLOSE", "Schließen");

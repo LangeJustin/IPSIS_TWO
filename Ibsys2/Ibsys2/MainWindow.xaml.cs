@@ -855,6 +855,8 @@ namespace Ibsys2
             Ui.EnableNextTab(Priorisierungtab, MainTabControl, false);
             //Ui.EnableNextTab(Chartstab, MainTabControl, false);
             Ui.EnableNextTab(Exporttab, MainTabControl, false);
+            Ui.EnableNextTab(uebersichtTab, MainTabControl, false);
+
             //Check atuotmatic Import
             if (found == false)
             {
@@ -1602,8 +1604,6 @@ namespace Ibsys2
                     sw.Close();
                     Process.Start(exportpath);
                 }
-                
-               
 
             }
 
@@ -1840,6 +1840,8 @@ namespace Ibsys2
             UpdatePlanningFields();
 
         }
+
+
     }
 }
 
