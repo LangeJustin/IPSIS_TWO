@@ -50,11 +50,23 @@
             <ColumnDefinition Width="835*"/>
             <ColumnDefinition Width="273*"/>
           </Grid.ColumnDefinitions>
-          <Button x:Name="choosefile" Content="Browse" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top" Width="75" Click="Choosefile_Click" ToolTip="Drag and Drop your XML File instead of choosing it here!" Grid.ColumnSpan="5"/>
-          <TextBox x:Name="Pathtextbox" MaxLines="1" HorizontalAlignment="Left" Height="23" Margin="10,77,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="286" TabIndex="0" ToolTip="Drag Dop your XML File here!" Grid.ColumnSpan="7" />
-          <Button x:Name="clear" Content="Clear all" HorizontalAlignment="Left" Margin="61,52,0,0" VerticalAlignment="Top" Width="75" Click="Clear_Click" RenderTransformOrigin="0.587,3.75" Grid.Column="6"/>
-          <Button x:Name="MainpageNextButton" Content="Next" HorizontalAlignment="Left" Margin="61,105,0,0" VerticalAlignment="Top" Width="75" Click="MainpageNextButton_Click" Grid.Column="6"/>
-        </Grid>
+                    <Button x:Name="choosefile" Content="Browse" HorizontalAlignment="Left" Margin="76,280,0,0" VerticalAlignment="Top" Width="101" Click="Choosefile_Click" ToolTip="Drag and Drop your XML File instead of choosing it here!" Grid.Column="6" Height="32" RenderTransformOrigin="0.645,0.469" Background="#FFE4DAFF" BorderThickness="1" Foreground="Black" BorderBrush="Black">
+                        <Button.Effect>
+                            <DropShadowEffect/>
+                        </Button.Effect>
+                    </Button>
+                    <TextBox x:Name="Pathtextbox" MaxLines="1" HorizontalAlignment="Left" Height="33" Margin="192,281,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="604" TabIndex="0" ToolTip="Drag Dop your XML File here!" Grid.Column="6" />
+                    <Button x:Name="clear" Content="Clear all" HorizontalAlignment="Left" Margin="420,320,0,0" VerticalAlignment="Top" Width="151" Click="Clear_Click" RenderTransformOrigin="0.587,3.75" Grid.Column="6" Height="20" Background="#FFFFC6C6">
+                        <Button.Effect>
+                            <DropShadowEffect/>
+                        </Button.Effect>
+                    </Button>
+                    <Button x:Name="MainpageNextButton" Content="Next" HorizontalAlignment="Left" Margin="806,281,0,0" VerticalAlignment="Top" Width="101" Click="MainpageNextButton_Click" Grid.Column="6" Height="31" Grid.ColumnSpan="2">
+                        <Button.Effect>
+                            <DropShadowEffect/>
+                        </Button.Effect>
+                    </Button>
+                </Grid>
       </TabItem>
       <TabItem x:Name="Prognosentab" Header="Vertrieb" IsEnabled="False" TabIndex="1">
         <TabItem.Background>
