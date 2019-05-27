@@ -1,11 +1,11 @@
-﻿<Window x:Class="Ibsys2.Pages.About.Help"
+﻿<Window x:Name="HILFESEITE" x:Class="Ibsys2.Pages.About.Help"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ibsys2.Pages.About"
         mc:Ignorable="d"
-        Title="Help" Height="300" Width="300" Icon="Planung.jpg">
+        Title="Help" Height="300" Width="300" Icon="Help.png">
   <Grid Background="#FF8CDCE4">
     <Grid.RowDefinitions>
       <RowDefinition Height="2*"/>

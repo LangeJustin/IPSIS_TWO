@@ -4,11 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Settings"  ResizeMode="NoResize" Height="300" Width="500" Icon="Planung.jpg">
+        Title="Settings"  ResizeMode="NoResize" Height="209.556" Width="364.505" Icon="Translate.png">
   <Grid Background="#FF8CDCE4">
-    <ComboBox x:Name="Languageselector" HorizontalAlignment="Left" Margin="27,52,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Languageselector_SelectionChanged"/>
-    <Label x:Name="LanguageLabel" Content="Sprache:" HorizontalAlignment="Left" Margin="27,21,0,0" VerticalAlignment="Top"/>
-    <Button x:Name="SaveButton" Content="Speichern" HorizontalAlignment="Left" Margin="386,222,0,0" VerticalAlignment="Top" Width="75" Click="SaveButton_Click"/>
+    <ComboBox x:Name="Languageselector" HorizontalAlignment="Left" Margin="94,31,0,0" VerticalAlignment="Top" Width="135" SelectionChanged="Languageselector_SelectionChanged"/>
+    <Label x:Name="LanguageLabel" Content="Sprache:" HorizontalAlignment="Left" Margin="19,27,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.418,0.967"/>
+    <Button x:Name="SaveButton" Content="Speichern" HorizontalAlignment="Left" Margin="260,31,0,0" VerticalAlignment="Top" Width="75" Click="SaveButton_Click" Height="22"/>
 
   </Grid>
 </Window>

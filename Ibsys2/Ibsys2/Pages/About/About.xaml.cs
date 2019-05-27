@@ -24,6 +24,7 @@ namespace Ibsys2.Pages.About {
       HelpText.Text = TranslateService.Class.GetTranslation("HELPTEXT");
       HierButton.Content = TranslateService.Class.GetTranslation("HIERBUTTON");
       WeitereHilfe.Content = TranslateService.Class.GetTranslation("WEITEREHILFE");
+      HILFESEITE.Title = TranslateService.Class.GetTranslation("HILFESEITE");
     }
 
     private void Button_Click(object sender, RoutedEventArgs e) {

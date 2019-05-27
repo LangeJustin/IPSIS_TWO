@@ -14,6 +14,7 @@ namespace Ibsys2.Service {
         }
 
         private static void Translate() {
+      _translate.Add("HILFESEITE", "Hilfe");
       _translate.Add("WEITEREHILFE", "Für weitere Hilfe klicken sie bitte:");
       _translate.Add("HIERBUTTON", "HIER");
       _translate.Add("KURZHILFE", "Kurzhilfe:");
