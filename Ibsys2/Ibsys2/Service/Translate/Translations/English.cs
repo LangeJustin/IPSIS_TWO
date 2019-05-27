@@ -14,6 +14,10 @@ namespace Ibsys2.Service {
         }
 
         private static void Translate() {
+      _translate.Add("WEITEREHILFE", "For further help please click:");
+      _translate.Add("HIERBUTTON", "HERE");
+      _translate.Add("KURZHILFE", "Short help:");
+      _translate.Add("HELPTEXT", "First an Input-XML must be loaded into the project with all the necessary data in the Import tab. After the necessary entries have been made in the Sales request and Direct sales tabs, the Calculate button can be clicked in the tab. This loads all necessary information into the tool. After all areas have been filled in, an export file can be created in the Export tab which can then be used to simulate.");
       _translate.Add("EILBESTELLUNG", "quick order");
       _translate.Add("NORMALBESTELLUNG", "normal order");
             _translate.Add("HELLO", "Hello");
@@ -21,7 +25,7 @@ namespace Ibsys2.Service {
             _translate.Add("REFRESHWOMEN", "refresh");
             _translate.Add("REFRESHMAN", "refresh");
             _translate.Add("SETTINGS_SAVED", "Settings saved! Would you like to restart the Program? Without a restart translate errors will occur!");
-            _translate.Add("SETTINGS", "Settings");
+            _translate.Add("SETTINGS", "Language");
             _translate.Add("XML_ERROR", "This is not a XML File!");
             _translate.Add("ONLY_INT_ERROR", "Please use only integer values!");
             _translate.Add("SALES_ORDERS", "Sales orders");
@@ -186,7 +190,7 @@ namespace Ibsys2.Service {
             _translate.Add("PROGRAM", "Program");
             _translate.Add("HELP", "Help");
             _translate.Add("CLOSE", "Close");
-            _translate.Add("ABOUT", "About");
+            _translate.Add("ABOUT", "Help");
             _translate.Add("OVERTIMEPERDAY", "Overtime per day");
             _translate.Add("IMPORT", "Import");
             _translate.Add("DISTRIBUTION", "Distribution");

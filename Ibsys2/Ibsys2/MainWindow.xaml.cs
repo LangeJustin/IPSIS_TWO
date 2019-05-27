@@ -122,6 +122,8 @@ namespace Ibsys2 {
         }
       }
 
+      
+
       MainpageNextButton.Content = TranslateService.Class.GetTranslation("NEXT");
       button.Content = TranslateService.Class.GetTranslation("REFRESHCHILD");
       button1.Content = TranslateService.Class.GetTranslation("REFRESHWOMEN");
@@ -129,9 +131,9 @@ namespace Ibsys2 {
       clear.Content = TranslateService.Class.GetTranslation("CLEAR");
       choosefile.Content = TranslateService.Class.GetTranslation("CHOOSEFILE");
       calculatebutton.Content = TranslateService.Class.GetTranslation("COUNT");
-      Programm.Header = TranslateService.Class.GetTranslation("PROGRAM");
-      Helpmenuitem.Header = TranslateService.Class.GetTranslation("HELP");
-      Closemenuitem.Header = TranslateService.Class.GetTranslation("CLOSE");
+      // Programm.Header = TranslateService.Class.GetTranslation("PROGRAM");
+      // Helpmenuitem.Header = TranslateService.Class.GetTranslation("HELP");
+      // Closemenuitem.Header = TranslateService.Class.GetTranslation("CLOSE");
       Settingsmenuheader.Header = TranslateService.Class.GetTranslation("SETTINGS");
       Aboutmenuheader.Header = TranslateService.Class.GetTranslation("ABOUT");
       Maintab.Header = TranslateService.Class.GetTranslation("IMPORT");
@@ -716,7 +718,7 @@ namespace Ibsys2 {
     }
 
     private void Aboutmenuheader_Click(object sender, RoutedEventArgs e) {
-      About AboutPage = new About();
+      Help AboutPage = new Help();
       AboutPage.Show();
     }
 

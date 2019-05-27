@@ -198,7 +198,8 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="front_page.jpg" />
+    <Resource Include="Pages\Settings\Planung.jpg" />
+    <Resource Include="Pages\About\Planung.jpg" />
     <Resource Include="Planung.jpg" />
     <Resource Include="Fahrradkette.jpg" />
     <Resource Include="favicon.ico" />

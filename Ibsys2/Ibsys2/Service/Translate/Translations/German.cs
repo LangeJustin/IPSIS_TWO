@@ -14,6 +14,10 @@ namespace Ibsys2.Service {
         }
 
         private static void Translate() {
+      _translate.Add("WEITEREHILFE", "Für weitere Hilfe klicken sie bitte:");
+      _translate.Add("HIERBUTTON", "HIER");
+      _translate.Add("KURZHILFE", "Kurzhilfe:");
+      _translate.Add("HELPTEXT", "Als erstes muss eine Input-XML mit allen nötigen Daten im Reiter Import in das Projekt geladen werden. Nachdem in den Reitern Vertriebswunsch und Direktverkauf die nötigen Eingaben getätigt wurden kann im Reiter der Button Berechne getätigt werden. Damit werden alle nötigen Informationen in das Tool geladen.Nachdem alle Bereiche ausgefüllt worden sind, wird im Reiter Export eine Export - Datei erstellt mit der dann simuliert werden kann.");
       _translate.Add("EILBESTELLUNG", "Eilbestellung");
       _translate.Add("NORMALBESTELLUNG", "Normalbestellung");
       _translate.Add("HELLO", "Hallo");
@@ -21,7 +25,7 @@ namespace Ibsys2.Service {
             _translate.Add("REFRESHWOMEN", "aktualisieren");
             _translate.Add("REFRESHMAN", "aktualisieren");
             _translate.Add("SETTINGS_SAVED", "Einstellungen gespeichert! Möchten Sie das Programm neustarten? Ohne Neustart kann es zu Problemen bei der Übersetzung kommen!");
-            _translate.Add("SETTINGS", "Einstellungen");
+            _translate.Add("SETTINGS", "Sprache");
             _translate.Add("XML_ERROR", "Das ist keine XML Datei!");
             _translate.Add("ONLY_INT_ERROR", "Bitte benutze nur Ganzzahlen!");
             _translate.Add("SALES_ORDERS", "verbindliche Aufträge");
@@ -186,7 +190,7 @@ namespace Ibsys2.Service {
             _translate.Add("PROGRAM","Programm");
             _translate.Add("HELP", "Hilfe");
             _translate.Add("CLOSE", "Schließen");
-            _translate.Add("ABOUT", "Über");
+            _translate.Add("ABOUT", "Hilfe");
             _translate.Add("OVERTIMEPERDAY", "Überstunden pro Tag");
             _translate.Add("IMPORT", "Import");
             _translate.Add("DISTRIBUTION", "Vertrieb");

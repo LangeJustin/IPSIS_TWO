@@ -1,18 +1,34 @@
-﻿<Window x:Class="Ibsys2.Pages.About.About"
+﻿<Window x:Class="Ibsys2.Pages.About.Help"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ibsys2.Pages.About"
         mc:Ignorable="d"
-        Title="About" Height="300" Width="300">
-    <Grid Background="#FFE5E5E5">
-        <Label x:Name="Transmorpher" Content="@2019" HorizontalAlignment="Left" Margin="22,31,0,0" VerticalAlignment="Top" Height="25" Width="142"/>
-        <Label x:Name="Iris_Braselmann" Content="Niklas Weber" HorizontalAlignment="Left" Margin="22,69,0,0" VerticalAlignment="Top" Height="25" Width="245"/>
-        <Label x:Name="Piotr" Content="Justin Lange" HorizontalAlignment="Left" Margin="24,121,0,0" VerticalAlignment="Top" Height="25" Width="245"/>
-        <Label x:Name="Raphael" Content="Matthias Jung" HorizontalAlignment="Left" Margin="156,91,-109,0" VerticalAlignment="Top" Height="25" Width="245"/>
-        <Label x:Name="Sophia" Content="Kira Dorner" HorizontalAlignment="Left" Margin="157,68,-110,0" VerticalAlignment="Top" Height="25" Width="245"/>
-        <Label x:Name="Patrick" Content="Janina Gladis" HorizontalAlignment="Left" Margin="22,92,0,0" VerticalAlignment="Top" Height="25" Width="245"/>
-        <Label x:Name="Piotr_Copy1" Content="Tim Engel" HorizontalAlignment="Left" Margin="157,121,-110,0" VerticalAlignment="Top" Height="25" Width="245"/>
-    </Grid>
+        Title="Help" Height="300" Width="300" Icon="Planung.jpg">
+  <Grid Background="#FF8CDCE4">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="2*"/>
+      <RowDefinition Height="19*"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="40"/>
+      <ColumnDefinition/>
+    </Grid.ColumnDefinitions>
+    <RichTextBox HorizontalAlignment="Left" Height="197" Margin="10,10,0,0" VerticalAlignment="Top" IsEnabled="False" Width="276" Grid.ColumnSpan="2" Grid.RowSpan="2">
+      <FlowDocument>
+        <Paragraph FontWeight="Bold">
+          <Run x:Name="Kurzhilfe"  Text="Kurzhilfe:"/>
+        </Paragraph>
+        <Paragraph TextAlignment="Justify">
+          <Run x:Name="HelpText"  Text="Help"/>
+        </Paragraph>
+      </FlowDocument>
+    </RichTextBox>
+    <Label x:Name="WeitereHilfe" Content="Für weitere Hilfe klicken sie bitte:" HorizontalAlignment="Left" Margin="10,199.222,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="186" Grid.Row="1"/>
+    <TextBlock Margin="0,0,0,-0.111" Grid.RowSpan="2">
+      <Hyperlink NavigateUri="https://weberniklas.github.io/ibsys/#" Name="hier"/>
+    </TextBlock>
+    <Button x:Name="HierButton" Content="Hier" Grid.Column="1" HorizontalAlignment="Left" Margin="156,202.222,0,0" VerticalAlignment="Top" Width="90" Click="Button_Click" Grid.Row="1"/>
+  </Grid>
 </Window>
