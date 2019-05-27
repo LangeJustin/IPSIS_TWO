@@ -51,7 +51,7 @@
               <DropShadowEffect/>
             </Button.Effect>
           </Button>
-          <TextBox x:Name="Pathtextbox" MaxLines="1" HorizontalAlignment="Left" Height="33" Margin="192,281,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="604" TabIndex="0" ToolTip="Drag Dop your XML File here!" Grid.Column="6" />
+          <TextBox x:Name="Pathtextbox" MaxLines="1" HorizontalAlignment="Left" Height="33" Margin="192,281,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="604" TabIndex="0" ToolTip="Drag'n'Drop your XML File here!" Grid.Column="6" />
           <Button x:Name="clear" Content="Clear all" HorizontalAlignment="Left" Margin="420,320,0,0" VerticalAlignment="Top" Width="151" Click="Clear_Click" RenderTransformOrigin="0.587,3.75" Grid.Column="6" Height="20" Background="#FFFFC6C6">
             <Button.Effect>
               <DropShadowEffect/>
@@ -443,7 +443,11 @@
                 <TextBox x:Name="kind710" HorizontalAlignment="Left" Height="23" Margin="20.334,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" IsEnabled="False" Grid.Column="15"/>
                 <TextBox x:Name="kind711" HorizontalAlignment="Left" Height="23" Margin="20.334,360,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" IsEnabled="False" Grid.Column="15"/>
                 <TextBox x:Name="kind712" HorizontalAlignment="Left" Height="23" Margin="20.334,390,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" IsEnabled="False" Grid.Column="15"/>
-                <Button x:Name="button" Content="refresh" Grid.Column="15" HorizontalAlignment="Left" Margin="5.334,477,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+                <Button x:Name="button" Content="refresh" Grid.Column="6" HorizontalAlignment="Left" Margin="14.778,446,0,0" VerticalAlignment="Top" Width="72" Click="Button_Click_1">
+                  <Button.Effect>
+                    <DropShadowEffect/>
+                  </Button.Effect>
+                </Button>
               </Grid>
             </TabItem>
             <TabItem x:Name="damenerradtab" Header="Damenerrad" IsEnabled="True">
@@ -657,7 +661,11 @@
                 <TextBox x:Name="damen710" HorizontalAlignment="Left" Height="23" Margin="20,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" IsEnabled="False" Grid.Column="14"/>
                 <TextBox x:Name="damen711" HorizontalAlignment="Left" Height="23" Margin="20,360,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" IsEnabled="False" Grid.Column="14"/>
                 <TextBox x:Name="damen712" HorizontalAlignment="Left" Height="23" Margin="20,390,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" IsEnabled="False" Grid.Column="14"/>
-                <Button x:Name="button1" Content="refresh" Grid.Column="14" HorizontalAlignment="Left" Margin="5,446,0,0" VerticalAlignment="Top" Width="75" Click="Button1_Click"/>
+                <Button x:Name="button1" Content="refresh" Grid.Column="6" HorizontalAlignment="Left" Margin="14.778,446,0,0" VerticalAlignment="Top" Width="72" Click="Button1_Click">
+                  <Button.Effect>
+                    <DropShadowEffect/>
+                  </Button.Effect>
+                </Button>
               </Grid>
             </TabItem>
 
@@ -879,7 +887,11 @@
                 <TextBox x:Name="herren710" HorizontalAlignment="Left" Height="23" Margin="20,330,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" IsEnabled="False" Grid.Column="14"/>
                 <TextBox x:Name="herren711" HorizontalAlignment="Left" Height="23" Margin="20,360,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" IsEnabled="False" Grid.Column="14"/>
                 <TextBox x:Name="herren712" HorizontalAlignment="Left" Height="23" Margin="20,390,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" IsEnabled="False" Grid.Column="14"/>
-                <Button x:Name="button2" Content="refresh" Grid.Column="14" HorizontalAlignment="Left" Margin="5,445,0,0" VerticalAlignment="Top" Width="75" Click="Button2_Click"/>
+                <Button x:Name="button2" Content="refresh" Grid.Column="6" HorizontalAlignment="Left" Margin="14.778,446,0,0" VerticalAlignment="Top" Width="72" Click="Button2_Click">
+                  <Button.Effect>
+                    <DropShadowEffect/>
+                  </Button.Effect>
+                </Button>
               </Grid>
             </TabItem>
 
