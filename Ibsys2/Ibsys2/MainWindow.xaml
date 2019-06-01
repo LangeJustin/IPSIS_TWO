@@ -32,7 +32,7 @@
           <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="Black" Offset="0"/>
             <GradientStop Color="White" Offset="1"/>
-            <GradientStop Color="#FF8CDCE4"/>
+            <GradientStop Color="#FFFFE3F1"/>
           </LinearGradientBrush>
         </TabItem.Background>
         <Grid Background="#FF8CDCE4" Margin="0,0,0,0">
@@ -69,7 +69,7 @@
         <TabItem.Background>
           <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
             <GradientStop Color="#FFF0F0F0" Offset="0"/>
-            <GradientStop Color="#FF8CDCE4" Offset="1"/>
+            <GradientStop Color="#FFFFE3F1" Offset="1"/>
           </LinearGradientBrush>
         </TabItem.Background>
         <Grid Background="#FF8CDCE4">
@@ -103,7 +103,7 @@
           <TextBox x:Name="period3sum" HorizontalAlignment="Left" Height="23" Margin="179.778,226,0,0" TextWrapping="Wrap" Text="300" VerticalAlignment="Top" Width="120" IsEnabled="False" Grid.Column="5"/>
           <Label x:Name="Vertriebswunsch" Content="Vertriebswunsch" HorizontalAlignment="Left" Margin="79.778,79,0,0" VerticalAlignment="Top" Width="146" Grid.Column="3" Grid.ColumnSpan="2"/>
           <Label x:Name="VertriebPrognose" Content="Prognose" HorizontalAlignment="Left" Margin="42.222,79,0,0" VerticalAlignment="Top" Width="344" Grid.ColumnSpan="2" Grid.Column="4"/>
-          <Button x:Name="PrognosenNextButton" Content="Next" HorizontalAlignment="Left" Margin="224.778,254,0,0" VerticalAlignment="Top" Width="75" Click="PrognosenNextbutton_Click" Grid.Column="5">
+          <Button x:Name="PrognosenNextButton" Content="Next" HorizontalAlignment="Left" Margin="224.778,265,0,0" VerticalAlignment="Top" Width="75" Click="PrognosenNextbutton_Click" Grid.Column="5">
             <Button.Effect>
               <DropShadowEffect/>
             </Button.Effect>
@@ -123,7 +123,7 @@
         <TabItem.Background>
           <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
             <GradientStop Color="#FFF0F0F0" Offset="0"/>
-            <GradientStop Color="#FF8CDCE4" Offset="1"/>
+            <GradientStop Color="#FFFFE3F1" Offset="1"/>
           </LinearGradientBrush>
         </TabItem.Background>
         <Grid Background="#FF8CDCE4">
@@ -150,7 +150,7 @@
           <TextBox x:Name="d13" HorizontalAlignment="Left" Height="23" Margin="55,142,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" TabIndex="10" Grid.Column="2" PreviewTextInput="NumberIntValidationTextBox"/>
           <TextBox x:Name="d23" HorizontalAlignment="Left" Height="23" Margin="55,170,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" TabIndex="11" Grid.Column="2" PreviewTextInput="NumberIntValidationTextBox"/>
           <TextBox x:Name="d33" HorizontalAlignment="Left" Height="23" Margin="55,198,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" TabIndex="12" Grid.Column="2" PreviewTextInput="NumberIntValidationTextBox"/>
-          <Button x:Name="directnextbutton" Content="Next" HorizontalAlignment="Left" Margin="100,230,0,0" VerticalAlignment="Top" Width="75" Click="DirectNextButton_Click" Grid.Column="2">
+          <Button x:Name="directnextbutton" Content="Next" HorizontalAlignment="Left" Margin="99.778,232,0,0" VerticalAlignment="Top" Width="75" Click="DirectNextButton_Click" Grid.Column="2">
             <Button.Effect>
               <DropShadowEffect/>
             </Button.Effect>
@@ -162,7 +162,7 @@
         <TabItem.Background>
           <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
             <GradientStop Color="#FFF0F0F0" Offset="0"/>
-            <GradientStop Color="#FF8CDCE4" Offset="1"/>
+            <GradientStop Color="#FFFFE3F1" Offset="1"/>
           </LinearGradientBrush>
         </TabItem.Background>
         <Grid Background="#FF8CDCE4">
@@ -198,9 +198,9 @@
           <TextBox x:Name="forecastsy4p2" HorizontalAlignment="Left" Height="23" Margin="180,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TabIndex="14" Text="100"  TextChanged="Forecast_TextChanged" Grid.Column="3" PreviewTextInput="NumberIntValidationTextBox"/>
           <TextBox x:Name="forecastsy4p3" HorizontalAlignment="Left" Height="23" Margin="180,198,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TabIndex="15" Text="100"  TextChanged="Forecast_TextChanged" Grid.Column="3" PreviewTextInput="NumberIntValidationTextBox"/>
           <TextBox x:Name="sumy4" HorizontalAlignment="Left" Height="23" Margin="180,226,0,0" TextWrapping="Wrap" Text="300" VerticalAlignment="Top" Width="120" IsEnabled="False" Grid.Column="3"/>
-          <Label x:Name="securityfactor" Content="Sicherheitsfaktor" HorizontalAlignment="Left" Margin="110,310,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-          <TextBox x:Name="Sicherheitsfaktor" HorizontalAlignment="Left" Height="23" Margin="95,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="1" PreviewTextInput="NumberIntValidationTextBox" Grid.Column="1" Grid.ColumnSpan="2"/>
-          <Button x:Name="calculatebutton" Content="Berechne" HorizontalAlignment="Left" Margin="225,254,0,0" VerticalAlignment="Top" Width="75" Click="Calculatebutton_Click" Grid.Column="3">
+          <Label x:Name="securityfactor" Content="Sicherheitsfaktor" HorizontalAlignment="Left" Margin="110,268,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+          <TextBox x:Name="Sicherheitsfaktor" HorizontalAlignment="Left" Height="23" Margin="94.889,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="1" PreviewTextInput="NumberIntValidationTextBox" Grid.Column="1" Grid.ColumnSpan="2"/>
+          <Button x:Name="calculatebutton" Content="Berechne" HorizontalAlignment="Left" Margin="224.778,268,0,0" VerticalAlignment="Top" Width="75" Click="Calculatebutton_Click" Grid.Column="3">
             <Button.Effect>
               <DropShadowEffect/>
             </Button.Effect>
@@ -211,7 +211,7 @@
         <TabItem.Background>
           <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
             <GradientStop Color="#FFF0F0F0" Offset="0"/>
-            <GradientStop Color="#FF8CDCE4" Offset="1"/>
+            <GradientStop Color="#FFFFE3F1" Offset="1"/>
           </LinearGradientBrush>
         </TabItem.Background>
         <Grid  Background="#FFE5E5E5">
@@ -233,6 +233,12 @@
               </Style>
             </TabControl.Resources>
             <TabItem x:Name="kinderradtab" Header="Kinderrad" IsEnabled="True" >
+              <TabItem.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                  <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                  <GradientStop Color="#FFFFE3F1" Offset="1"/>
+                </LinearGradientBrush>
+              </TabItem.Background>
               <Grid Background="#FF8CDCE4">
                 <Grid.ColumnDefinitions>
                   <ColumnDefinition Width="30"/>
@@ -451,6 +457,12 @@
               </Grid>
             </TabItem>
             <TabItem x:Name="damenerradtab" Header="Damenerrad" IsEnabled="True">
+              <TabItem.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                  <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                  <GradientStop Color="#FFFFE3F1" Offset="1"/>
+                </LinearGradientBrush>
+              </TabItem.Background>
               <Grid Background="#FF8CDCE4">
                 <Grid.ColumnDefinitions>
                   <ColumnDefinition Width="30"/>
@@ -673,7 +685,7 @@
               <TabItem.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                   <GradientStop Color="#FFF0F0F0" Offset="0"/>
-                  <GradientStop Color="#FFE5E5E5" Offset="1"/>
+                  <GradientStop Color="#FFFFE3F1" Offset="1"/>
                 </LinearGradientBrush>
               </TabItem.Background>
               <Grid Background="#FF8CDCE4">
@@ -905,7 +917,7 @@
         <TabItem.Background>
           <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
             <GradientStop Color="#FFF0F0F0" Offset="0"/>
-            <GradientStop Color="#FF8CDCE4" Offset="1"/>
+            <GradientStop Color="#FFE5E5E5" Offset="1"/>
           </LinearGradientBrush>
         </TabItem.Background>
         <Grid Background="#FFE5E5E5">
@@ -1326,7 +1338,7 @@
         <TabItem.Background>
           <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
             <GradientStop Color="#FFF0F0F0" Offset="0"/>
-            <GradientStop Color="#FF8CDCE4" Offset="1"/>
+            <GradientStop Color="#FFFFE3F1" Offset="1"/>
           </LinearGradientBrush>
         </TabItem.Background>
         <Grid Background="#FFE5E5E5">
@@ -1336,6 +1348,12 @@
           </Grid.ColumnDefinitions>
           <TabControl TabStripPlacement="Left" Background="#FF8CDCE4" Grid.ColumnSpan="2">
             <TabItem x:Name="Bestell" Header="Bestellübersicht">
+              <TabItem.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                  <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                  <GradientStop Color="#FFFFE3F1" Offset="1"/>
+                </LinearGradientBrush>
+              </TabItem.Background>
               <Grid>
                 <Grid.ColumnDefinitions>
                   <ColumnDefinition Width="446*"/>
@@ -1391,7 +1409,7 @@
         <TabItem.Background>
           <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
             <GradientStop Color="#FFF0F0F0" Offset="0"/>
-            <GradientStop Color="#FF8CDCE4" Offset="1"/>
+            <GradientStop Color="#FFFFE3F1" Offset="1"/>
           </LinearGradientBrush>
         </TabItem.Background>
         <Grid Background="#FF8CDCE4">
@@ -1417,7 +1435,7 @@
         <TabItem.Background>
           <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
             <GradientStop Color="#FFF0F0F0" Offset="0"/>
-            <GradientStop Color="#FF8CDCE4" Offset="1"/>
+            <GradientStop Color="#FFFFE3F1" Offset="1"/>
           </LinearGradientBrush>
         </TabItem.Background>
         <Grid Background="#FF8CDCE4">

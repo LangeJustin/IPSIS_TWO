@@ -38,7 +38,8 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="De.TorstenMandelkow.MetroChart, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d5b8d1bbc99c4a2a, processorArchitecture=MSIL">
@@ -176,12 +177,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Help_de.pdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Help_en.pdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -198,11 +193,11 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="favicon.ico" />
     <Resource Include="Pages\Settings\Translate.png" />
     <Resource Include="Pages\About\Help.png" />
     <Resource Include="Planung.jpg" />
     <Resource Include="Fahrradkette.jpg" />
-    <Resource Include="favicon.ico" />
     <Content Include="De.TorstenMandelkow.MetroChart.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
