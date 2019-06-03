@@ -14,6 +14,7 @@ namespace Ibsys2.Service {
         }
 
         private static void Translate() {
+      _translate.Add("GESLAGER", "Total stockvalue :");
       _translate.Add("HILFESEITE", "Help");
       _translate.Add("WEITEREHILFE", "For further help please click:");
       _translate.Add("HIERBUTTON", "HERE");
@@ -25,7 +26,7 @@ namespace Ibsys2.Service {
             _translate.Add("REFRESHCHILD", "refresh");
             _translate.Add("REFRESHWOMEN", "refresh");
             _translate.Add("REFRESHMAN", "refresh");
-            _translate.Add("SETTINGS_SAVED", "Settings saved! Would you like to restart the Program? Without a restart translate errors will occur!");
+            _translate.Add("SETTINGS_SAVED", "Settings saved! - Restart program to prevent translation errors?");
             _translate.Add("SETTINGS", "Language");
             _translate.Add("XML_ERROR", "This is not a XML File!");
             _translate.Add("ONLY_INT_ERROR", "Please use only integer values!");
@@ -234,7 +235,7 @@ namespace Ibsys2.Service {
             _translate.Add("LVERWENDUNG", "Use in");
             _translate.Add("LAARTIKEL", "Article");
             _translate.Add("LAMENGE", "Quantity");
-            _translate.Add("LAMENGE1", "Quantity %");
+            _translate.Add("LAMENGE1", "Quantity");
             _translate.Add("LASTARTMENGE", "Quantity at beginnig");
             _translate.Add("LAPREIS", "Price");
             _translate.Add("LALAGERWERT", "Inventory value");

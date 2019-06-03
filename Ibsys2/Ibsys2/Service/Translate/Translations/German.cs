@@ -5,15 +5,15 @@ using static Ibsys2.Service.TranslateService;
 
 
 namespace Ibsys2.Service {
-    public static class GermanTranslation {
-        private static Dictionary<string, string> _translate = new Dictionary<string, string>();
+  public static class GermanTranslation {
+    private static Dictionary<string, string> _translate = new Dictionary<string, string>();
 
-        public static void AddLanguage() {
-            Translate();
-            TranslateService.Class.AddTranslation(new Language("de", "Deutsch"), _translate);
-        }
-
+    public static void AddLanguage() {
+      Translate();
+      TranslateService.Class.AddTranslation(new Language("de", "Deutsch"), _translate);
+    }
         private static void Translate() {
+      _translate.Add("GESLAGER", "Lagerwert gesamt :");
       _translate.Add("HILFESEITE", "Hilfe");
       _translate.Add("WEITEREHILFE", "Für weitere Hilfe klicken sie bitte:");
       _translate.Add("HIERBUTTON", "HIER");
@@ -25,7 +25,7 @@ namespace Ibsys2.Service {
             _translate.Add("REFRESHCHILD", "aktualisieren");
             _translate.Add("REFRESHWOMEN", "aktualisieren");
             _translate.Add("REFRESHMAN", "aktualisieren");
-            _translate.Add("SETTINGS_SAVED", "Einstellungen gespeichert! Möchten Sie das Programm neustarten? Ohne Neustart kann es zu Problemen bei der Übersetzung kommen!");
+            _translate.Add("SETTINGS_SAVED", "Einstellungen gespeichert! - Programm neu starten um Übersetzungsfehler zu vermeiden?");
             _translate.Add("SETTINGS", "Sprache");
             _translate.Add("XML_ERROR", "Das ist keine XML Datei!");
             _translate.Add("ONLY_INT_ERROR", "Bitte benutze nur Ganzzahlen!");
@@ -234,7 +234,7 @@ namespace Ibsys2.Service {
             _translate.Add("LVERWENDUNG", "Verwendung");
             _translate.Add("LAARTIKEL", "Artikel");
             _translate.Add("LAMENGE", "Menge");
-            _translate.Add("LAMENGE1", "Menge %");
+            _translate.Add("LAMENGE1", "Menge");
             _translate.Add("LASTARTMENGE", "Startmenge");
             _translate.Add("LAPREIS", "Preis");
             _translate.Add("LALAGERWERT", "Lagerwert");

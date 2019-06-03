@@ -36,6 +36,7 @@ namespace Ibsys2 {
         return _class;
       }
     }
+    public static double lagerwert { get; set; }
     string exportpath = "";
     bool found = false;
     public MainWindow() {
@@ -122,8 +123,8 @@ namespace Ibsys2 {
         }
       }
 
-      
 
+      GesLagerbestand.Content = TranslateService.Class.GetTranslation("GESLAGER");
       MainpageNextButton.Content = TranslateService.Class.GetTranslation("NEXT");
       button.Content = TranslateService.Class.GetTranslation("REFRESHCHILD");
       button1.Content = TranslateService.Class.GetTranslation("REFRESHWOMEN");
@@ -1144,9 +1145,13 @@ namespace Ibsys2 {
 
       var fields = (ObservableCollection<Lagerbestand>)dataGrid32.ItemsSource;
       fields.Clear();
+      // TODO: 
+      lagerwert = 0;
       foreach (var item in Warehousestock.Class.Liste) {
-        fields.Add(new Lagerbestand(item.ID.ToString(), item.Amount.ToString(), item.Startamount.ToString(), item.Pct.ToString(), item.Price.ToString(), item.Stockvalue.ToString()));
+        fields.Add(new Lagerbestand(item.ID.ToString(), item.Amount.ToString(), item.Startamount.ToString(), (item.Pct / 100).ToString() + " %", (item.Price / 100).ToString() + " €", (item.Stockvalue / 100).ToString() + " €"));
+        lagerwert += (item.Stockvalue / 100);
       }
+      Gesamtlagerbestand.Text = lagerwert + " €";
       /*
       dataGrid31.Columns[0].IsReadOnly = true;
       dataGrid31.Columns[0].Header = TranslateService.Class.GetTranslation("ITEM_NO");*/

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Ibsys2"
         xmlns:chart="clr-namespace:De.TorstenMandelkow.MetroChart;assembly=De.TorstenMandelkow.MetroChart"
         mc:Ignorable="d"
-        Title="IBSYS2 Tool" ResizeMode="NoResize" Height="720" Width="1280"  AllowDrop="True" DragEnter="Window_DragEnter" FontFamily="Arial" Cursor="Arrow" Icon="Planung.jpg" Foreground="#FFD60D0D" >
+        Title="IBSYS2 Tool" ResizeMode="NoResize" Height="720" Width="1280"  AllowDrop="True" DragEnter="Window_DragEnter" FontFamily="Arial" Cursor="Arrow" Icon="IBSYS2_Logo.png" Foreground="#FFD60D0D" >
   <Window.Background>
     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
       <GradientStop Color="Black" Offset="0"/>
@@ -21,21 +21,29 @@
       <ColumnDefinition Width="341*"/>
     </Grid.ColumnDefinitions>
 
-    <Menu Grid.ColumnSpan="2" Margin="0,0,-0.4,0.4" IsEnabled="True" Background="#FF5F9297">
+    <Menu Grid.ColumnSpan="2" Margin="0,0,-0.4,0.4" IsEnabled="True" Background="DarkGray">
       <MenuItem x:Name="Settingsmenuheader" Header="Language" Click="Settingsmenuheader_Click"/>
       <MenuItem x:Name="Aboutmenuheader" Header="Help"  Click="Aboutmenuheader_Click"/>
     </Menu>
 
-    <TabControl x:Name="MainTabControl" HorizontalAlignment="Left" Height="672" Margin="0,19,-0.4,-0.6" VerticalAlignment="Top" Width="1274" SelectedIndex="0" SelectionChanged="MainTabControl_SelectionChanged" Grid.ColumnSpan="2" Background="#FF8CDCE4" Foreground="#FF8CDCE4">
+    <TabControl x:Name="MainTabControl" HorizontalAlignment="Left" Height="672" Margin="0,19,-0.4,-0.6" VerticalAlignment="Top" Width="1274" SelectedIndex="0" SelectionChanged="MainTabControl_SelectionChanged" Grid.ColumnSpan="2" Background="#FF00489D" Foreground="#FF8CDCE4">
       <TabItem x:Name="Maintab" Header="Import" TabIndex="0" Width="141">
         <TabItem.Background>
           <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="Black" Offset="0"/>
             <GradientStop Color="White" Offset="1"/>
-            <GradientStop Color="#FFFFE3F1"/>
+            <GradientStop Color="#FFE7BD23"/>
           </LinearGradientBrush>
         </TabItem.Background>
-        <Grid Background="#FF8CDCE4" Margin="0,0,0,0">
+        <Grid Margin="0,0,0,0">
+          <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+              <GradientStop Color="White" Offset="0.768"/>
+              <GradientStop Color="#FF00489D" Offset="1"/>
+              <GradientStop Color="#FF99B6D8" Offset="0.887"/>
+              <GradientStop Color="#FFCEDCEC" Offset="0.84"/>
+            </LinearGradientBrush>
+          </Grid.Background>
           <Grid.ColumnDefinitions>
             <ColumnDefinition Width="54*"/>
             <ColumnDefinition Width="11*"/>
@@ -43,36 +51,46 @@
             <ColumnDefinition Width="8*"/>
             <ColumnDefinition Width="74*"/>
             <ColumnDefinition Width="7*"/>
-            <ColumnDefinition Width="835*"/>
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="775*"/>
             <ColumnDefinition Width="273*"/>
           </Grid.ColumnDefinitions>
-          <Button x:Name="choosefile" Content="Browse" HorizontalAlignment="Left" Margin="76,280,0,0" VerticalAlignment="Top" Width="101" Click="Choosefile_Click" ToolTip="Drag and Drop your XML File instead of choosing it here!" Grid.Column="6" Height="32" RenderTransformOrigin="0.645,0.469" Background="#FFE4DAFF" BorderThickness="1" Foreground="Black" BorderBrush="Black">
+          <Button x:Name="choosefile" Content="Browse" HorizontalAlignment="Left" Margin="10,338,0,0" VerticalAlignment="Top" Width="101" Click="Choosefile_Click" ToolTip="Drag and Drop your XML File instead of choosing it here!" Grid.Column="8" Height="32" RenderTransformOrigin="0.645,0.469" Background="#FFE4DAFF" BorderThickness="1" Foreground="Black" BorderBrush="Black">
             <Button.Effect>
               <DropShadowEffect/>
             </Button.Effect>
           </Button>
-          <TextBox x:Name="Pathtextbox" MaxLines="1" HorizontalAlignment="Left" Height="33" Margin="192,281,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="604" TabIndex="0" ToolTip="Drag'n'Drop your XML File here!" Grid.Column="6" />
-          <Button x:Name="clear" Content="Clear all" HorizontalAlignment="Left" Margin="420,320,0,0" VerticalAlignment="Top" Width="151" Click="Clear_Click" RenderTransformOrigin="0.587,3.75" Grid.Column="6" Height="20" Background="#FFFFC6C6">
+          <TextBox x:Name="Pathtextbox" MaxLines="1" HorizontalAlignment="Left" Height="33" Margin="126,339,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="604" TabIndex="0" ToolTip="Drag'n'Drop your XML File here!" Grid.Column="8" />
+          <Button x:Name="clear" Content="Clear all" HorizontalAlignment="Left" Margin="354,378,0,0" VerticalAlignment="Top" Width="151" Click="Clear_Click" RenderTransformOrigin="0.587,3.75" Grid.Column="8" Height="20" Background="#FFFFC6C6">
             <Button.Effect>
               <DropShadowEffect/>
             </Button.Effect>
           </Button>
-          <Button x:Name="MainpageNextButton" Content="Next" HorizontalAlignment="Left" Margin="806,281,0,0" VerticalAlignment="Top" Width="101" Click="MainpageNextButton_Click" Grid.Column="6" Height="31" Grid.ColumnSpan="2">
+          <Button x:Name="MainpageNextButton" Content="Next" HorizontalAlignment="Left" Margin="743,339,0,0" VerticalAlignment="Top" Width="101" Click="MainpageNextButton_Click" Grid.Column="8" Height="31" Grid.ColumnSpan="2">
             <Button.Effect>
               <DropShadowEffect/>
             </Button.Effect>
           </Button>
-          <Image Grid.Column="6" Margin="189,43,42,436" Source="front_page.jpg" Stretch="Fill"/>
+          <Image Grid.Column="8" HorizontalAlignment="Left" Height="201" Margin="262,97,0,0" VerticalAlignment="Top" Width="329" Source="IBSYS2_Logo.PNG" RenderTransformOrigin="0.609,0.526"/>
         </Grid>
       </TabItem>
       <TabItem x:Name="Prognosentab" Header="Vertrieb" IsEnabled="False" TabIndex="1" Width="141">
         <TabItem.Background>
           <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
             <GradientStop Color="#FFF0F0F0" Offset="0"/>
-            <GradientStop Color="#FFFFE3F1" Offset="1"/>
+            <GradientStop Color="#FFE7BD23" Offset="1"/>
           </LinearGradientBrush>
         </TabItem.Background>
-        <Grid Background="#FF8CDCE4">
+        <Grid>
+          <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+              <GradientStop Color="White" Offset="0.768"/>
+              <GradientStop Color="#FF00489D" Offset="1"/>
+              <GradientStop Color="#FF99B6D8" Offset="0.887"/>
+              <GradientStop Color="#FFCEDCEC" Offset="0.84"/>
+            </LinearGradientBrush>
+          </Grid.Background>
           <Grid.ColumnDefinitions>
             <ColumnDefinition Width="133*"/>
             <ColumnDefinition Width="13*"/>
@@ -123,10 +141,18 @@
         <TabItem.Background>
           <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
             <GradientStop Color="#FFF0F0F0" Offset="0"/>
-            <GradientStop Color="#FFFFE3F1" Offset="1"/>
+            <GradientStop Color="#FFE7BD23" Offset="1"/>
           </LinearGradientBrush>
         </TabItem.Background>
-        <Grid Background="#FF8CDCE4">
+        <Grid>
+          <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+              <GradientStop Color="White" Offset="0.768"/>
+              <GradientStop Color="#FF00489D" Offset="1"/>
+              <GradientStop Color="#FF99B6D8" Offset="0.887"/>
+              <GradientStop Color="#FFCEDCEC" Offset="0.84"/>
+            </LinearGradientBrush>
+          </Grid.Background>
           <Grid.ColumnDefinitions>
             <ColumnDefinition Width="203*"/>
             <ColumnDefinition Width="271*"/>
@@ -162,10 +188,18 @@
         <TabItem.Background>
           <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
             <GradientStop Color="#FFF0F0F0" Offset="0"/>
-            <GradientStop Color="#FFFFE3F1" Offset="1"/>
+            <GradientStop Color="#FFE7BD23" Offset="1"/>
           </LinearGradientBrush>
         </TabItem.Background>
-        <Grid Background="#FF8CDCE4">
+        <Grid>
+          <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+              <GradientStop Color="White" Offset="0.768"/>
+              <GradientStop Color="#FF00489D" Offset="1"/>
+              <GradientStop Color="#FF99B6D8" Offset="0.887"/>
+              <GradientStop Color="#FFCEDCEC" Offset="0.84"/>
+            </LinearGradientBrush>
+          </Grid.Background>
           <Grid.ColumnDefinitions>
             <ColumnDefinition Width="139*"/>
             <ColumnDefinition Width="208*"/>
@@ -211,7 +245,7 @@
         <TabItem.Background>
           <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
             <GradientStop Color="#FFF0F0F0" Offset="0"/>
-            <GradientStop Color="#FFFFE3F1" Offset="1"/>
+            <GradientStop Color="#FFE7BD23" Offset="1"/>
           </LinearGradientBrush>
         </TabItem.Background>
         <Grid  Background="#FFE5E5E5">
@@ -236,10 +270,18 @@
               <TabItem.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                   <GradientStop Color="#FFF0F0F0" Offset="0"/>
-                  <GradientStop Color="#FFFFE3F1" Offset="1"/>
+                  <GradientStop Color="#FFE7BD23" Offset="1"/>
                 </LinearGradientBrush>
               </TabItem.Background>
-              <Grid Background="#FF8CDCE4">
+              <Grid>
+                <Grid.Background>
+                  <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0.768"/>
+                    <GradientStop Color="#FF00489D" Offset="1"/>
+                    <GradientStop Color="#FF99B6D8" Offset="0.887"/>
+                    <GradientStop Color="#FFCEDCEC" Offset="0.84"/>
+                  </LinearGradientBrush>
+                </Grid.Background>
                 <Grid.ColumnDefinitions>
                   <ColumnDefinition Width="30"/>
                   <ColumnDefinition Width="60"/>
@@ -460,10 +502,18 @@
               <TabItem.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                   <GradientStop Color="#FFF0F0F0" Offset="0"/>
-                  <GradientStop Color="#FFFFE3F1" Offset="1"/>
+                  <GradientStop Color="#FFE7BD23" Offset="1"/>
                 </LinearGradientBrush>
               </TabItem.Background>
-              <Grid Background="#FF8CDCE4">
+              <Grid>
+                <Grid.Background>
+                  <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0.768"/>
+                    <GradientStop Color="#FF00489D" Offset="1"/>
+                    <GradientStop Color="#FF99B6D8" Offset="0.887"/>
+                    <GradientStop Color="#FFCEDCEC" Offset="0.84"/>
+                  </LinearGradientBrush>
+                </Grid.Background>
                 <Grid.ColumnDefinitions>
                   <ColumnDefinition Width="30"/>
                   <ColumnDefinition Width="60"/>
@@ -685,10 +735,18 @@
               <TabItem.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                   <GradientStop Color="#FFF0F0F0" Offset="0"/>
-                  <GradientStop Color="#FFFFE3F1" Offset="1"/>
+                  <GradientStop Color="#FFE7BD23" Offset="1"/>
                 </LinearGradientBrush>
               </TabItem.Background>
-              <Grid Background="#FF8CDCE4">
+              <Grid>
+                <Grid.Background>
+                  <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0.768"/>
+                    <GradientStop Color="#FF00489D" Offset="1"/>
+                    <GradientStop Color="#FF99B6D8" Offset="0.887"/>
+                    <GradientStop Color="#FFCEDCEC" Offset="0.84"/>
+                  </LinearGradientBrush>
+                </Grid.Background>
                 <Grid.ColumnDefinitions>
                   <ColumnDefinition Width="30"/>
                   <ColumnDefinition Width="60"/>
@@ -929,7 +987,7 @@
                   <RowDefinition Height="147*"/>
                 </Grid.RowDefinitions>
                 <GroupBox x:Name="Work1Box" Grid.Column="0" Header="Arbeitsplatz 1">
-                  <DataGrid Name="dataGrid1" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FF8CDCE4">
+                  <DataGrid Name="dataGrid1" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="White">
                     <DataGrid.Columns >
                       <DataGridTextColumn x:Name="Plan1Box_Bezeichnung" Header="Dummy" Binding="{Binding Bezeichnung}"></DataGridTextColumn>
                       <DataGridTextColumn x:Name="Plan1Box_Fahrradtyp" Header="Last Name" Binding="{Binding Fahrradtyp}"></DataGridTextColumn>
@@ -941,7 +999,7 @@
                   </DataGrid>
                 </GroupBox>
                 <GroupBox x:Name="Plan1Box" Grid.Row="1" Grid.Column="0" Header="Kapazitätsplanung Arbeitsplatz 1">
-                  <DataGrid Name="dataGrid16" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FF8CDCE4">
+                  <DataGrid Name="dataGrid16" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFFFFFFF">
                     <DataGrid.Columns >
                       <DataGridTextColumn x:Name="Plan1Box_Kapaplanwork" Header="Dummy" Binding="{Binding Kapaplanwork}"></DataGridTextColumn>
                       <DataGridTextColumn x:Name="Plan1Box_Berechnungwork" Header="Last Name" Binding="{Binding Berechnungwork}"></DataGridTextColumn>
@@ -958,7 +1016,7 @@
                   <RowDefinition Height="147*"/>
                 </Grid.RowDefinitions>
                 <GroupBox x:Name="Work2Box" Grid.Column="0" Header="Arbeitsplatz 2">
-                  <DataGrid Name="dataGrid2" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FF8CDCE4">
+                  <DataGrid Name="dataGrid2" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFFFFFFF">
                     <DataGrid.Columns >
                       <DataGridTextColumn x:Name="Plan2Box_Bezeichnung" Header="Dummy" Binding="{Binding Bezeichnung}"></DataGridTextColumn>
                       <DataGridTextColumn x:Name="Plan2Box_Fahrradtyp" Header="Last Name" Binding="{Binding Fahrradtyp}"></DataGridTextColumn>
@@ -970,7 +1028,7 @@
                   </DataGrid>
                 </GroupBox>
                 <GroupBox x:Name="Plan2Box" Grid.Row="1" Grid.Column="0" Header="Kapazitätsplanung Arbeitsplatz 2">
-                  <DataGrid Name="dataGrid17" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FF8CDCE4">
+                  <DataGrid Name="dataGrid17" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFFFFFFF">
                     <DataGrid.Columns >
                       <DataGridTextColumn x:Name="Plan2Box_Kapaplanwork" Header="Dummy" Binding="{Binding Kapaplanwork}"></DataGridTextColumn>
                       <DataGridTextColumn x:Name="Plan2Box_Berechnungwork" Header="Last Name" Binding="{Binding Berechnungwork}"></DataGridTextColumn>
@@ -988,7 +1046,7 @@
                   <RowDefinition Height="147*"/>
                 </Grid.RowDefinitions>
                 <GroupBox x:Name="Work3Box" Grid.Column="0" Header="Arbeitsplatz 3">
-                  <DataGrid Name="dataGrid3" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FF8CDCE4">
+                  <DataGrid Name="dataGrid3" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFFFFFFF">
                     <DataGrid.Columns >
                       <DataGridTextColumn x:Name="Plan3Box_Bezeichnung" Header="Dummy" Binding="{Binding Bezeichnung}"></DataGridTextColumn>
                       <DataGridTextColumn x:Name="Plan3Box_Fahrradtyp" Header="Last Name" Binding="{Binding Fahrradtyp}"></DataGridTextColumn>
@@ -1000,7 +1058,7 @@
                   </DataGrid>
                 </GroupBox>
                 <GroupBox x:Name="Plan3Box" Grid.Row="1" Grid.Column="0" Header="Kapazitätsplanung Arbeitsplatz 3">
-                  <DataGrid Name="dataGrid18" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FF8CDCE4">
+                  <DataGrid Name="dataGrid18" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFFFFFFF">
                     <DataGrid.Columns >
                       <DataGridTextColumn x:Name="Plan3Box_Kapaplanwork" Header="Dummy" Binding="{Binding Kapaplanwork}"></DataGridTextColumn>
                       <DataGridTextColumn x:Name="Plan3Box_Berechnungwork" Header="Last Name" Binding="{Binding Berechnungwork}"></DataGridTextColumn>
@@ -1017,7 +1075,7 @@
                   <RowDefinition Height="147*"/>
                 </Grid.RowDefinitions>
                 <GroupBox x:Name="Work4Box" Grid.Column="0" Header="Arbeitsplatz 4">
-                  <DataGrid Name="dataGrid4" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FF8CDCE4">
+                  <DataGrid Name="dataGrid4" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFFFFFFF">
                     <DataGrid.Columns >
                       <DataGridTextColumn x:Name="Plan4Box_Bezeichnung" Header="Dummy" Binding="{Binding Bezeichnung}"></DataGridTextColumn>
                       <DataGridTextColumn x:Name="Plan4Box_Fahrradtyp" Header="Last Name" Binding="{Binding Fahrradtyp}"></DataGridTextColumn>
@@ -1029,7 +1087,7 @@
                   </DataGrid>
                 </GroupBox>
                 <GroupBox x:Name="Plan4Box" Grid.Row="1" Grid.Column="0" Header="Kapazitätsplanung Arbeitsplatz 4">
-                  <DataGrid Name="dataGrid19" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FF8CDCE4">
+                  <DataGrid Name="dataGrid19" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFFFFFFF">
                     <DataGrid.Columns >
                       <DataGridTextColumn x:Name="Plan4Box_Kapaplanwork" Header="Dummy" Binding="{Binding Kapaplanwork}"></DataGridTextColumn>
                       <DataGridTextColumn x:Name="Plan4Box_Berechnungwork" Header="Last Name" Binding="{Binding Berechnungwork}"></DataGridTextColumn>
@@ -1046,7 +1104,7 @@
                   <RowDefinition Height="147*"/>
                 </Grid.RowDefinitions>
                 <GroupBox x:Name="Work6Box" Grid.Column="0" Header="Arbeitsplatz 6">
-                  <DataGrid Name="dataGrid6" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FF8CDCE4">
+                  <DataGrid Name="dataGrid6" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFFFFFFF">
                     <DataGrid.Columns >
                       <DataGridTextColumn x:Name="Plan6Box_Bezeichnung" Header="Dummy" Binding="{Binding Bezeichnung}"></DataGridTextColumn>
                       <DataGridTextColumn x:Name="Plan6Box_Fahrradtyp" Header="Last Name" Binding="{Binding Fahrradtyp}"></DataGridTextColumn>
@@ -1058,7 +1116,7 @@
                   </DataGrid>
                 </GroupBox>
                 <GroupBox x:Name="Plan6Box" Grid.Row="1" Grid.Column="0" Header="Kapazitätsplanung Arbeitsplatz 6">
-                  <DataGrid Name="dataGrid20" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FF8CDCE4">
+                  <DataGrid Name="dataGrid20" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFFFFFFF">
                     <DataGrid.Columns >
                       <DataGridTextColumn x:Name="Plan6Box_Kapaplanwork" Header="Dummy" Binding="{Binding Kapaplanwork}"></DataGridTextColumn>
                       <DataGridTextColumn x:Name="Plan6Box_Berechnungwork" Header="Last Name" Binding="{Binding Berechnungwork}"></DataGridTextColumn>
@@ -1075,7 +1133,7 @@
                   <RowDefinition Height="147*"/>
                 </Grid.RowDefinitions>
                 <GroupBox x:Name="Work7Box" Grid.Column="0" Header="Arbeitsplatz 7">
-                  <DataGrid Name="dataGrid7" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FF8CDCE4">
+                  <DataGrid Name="dataGrid7" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFFFFFFF">
                     <DataGrid.Columns >
                       <DataGridTextColumn x:Name="Plan7Box_Bezeichnung" Header="Dummy" Binding="{Binding Bezeichnung}"></DataGridTextColumn>
                       <DataGridTextColumn x:Name="Plan7Box_Fahrradtyp" Header="Last Name" Binding="{Binding Fahrradtyp}"></DataGridTextColumn>
@@ -1087,7 +1145,7 @@
                   </DataGrid>
                 </GroupBox>
                 <GroupBox x:Name="Plan7Box" Grid.Row="1" Grid.Column="0" Header="Kapazitätsplanung Arbeitsplatz 7">
-                  <DataGrid Name="dataGrid21" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FF8CDCE4">
+                  <DataGrid Name="dataGrid21" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFFFFFFF">
                     <DataGrid.Columns >
                       <DataGridTextColumn x:Name="Plan7Box_Kapaplanwork" Header="Dummy" Binding="{Binding Kapaplanwork}"></DataGridTextColumn>
                       <DataGridTextColumn x:Name="Plan7Box_Berechnungwork" Header="Last Name" Binding="{Binding Berechnungwork}"></DataGridTextColumn>
@@ -1104,7 +1162,7 @@
                   <RowDefinition Height="147*"/>
                 </Grid.RowDefinitions>
                 <GroupBox x:Name="Work8Box" Grid.Column="0" Header="Arbeitsplatz 8">
-                  <DataGrid Name="dataGrid8" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FF8CDCE4">
+                  <DataGrid Name="dataGrid8" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFFFFFFF">
                     <DataGrid.Columns >
                       <DataGridTextColumn x:Name="Plan8Box_Bezeichnung" Header="Dummy" Binding="{Binding Bezeichnung}"></DataGridTextColumn>
                       <DataGridTextColumn x:Name="Plan8Box_Fahrradtyp" Header="Last Name" Binding="{Binding Fahrradtyp}"></DataGridTextColumn>
@@ -1116,7 +1174,7 @@
                   </DataGrid>
                 </GroupBox>
                 <GroupBox x:Name="Plan8Box" Grid.Row="1" Grid.Column="0" Header="Kapazitätsplanung Arbeitsplatz 8">
-                  <DataGrid Name="dataGrid22" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FF8CDCE4">
+                  <DataGrid Name="dataGrid22" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFFFFFFF">
                     <DataGrid.Columns >
                       <DataGridTextColumn x:Name="Plan8Box_Kapaplanwork" Header="Dummy" Binding="{Binding Kapaplanwork}"></DataGridTextColumn>
                       <DataGridTextColumn x:Name="Plan8Box_Berechnungwork" Header="Last Name" Binding="{Binding Berechnungwork}"></DataGridTextColumn>
@@ -1133,7 +1191,7 @@
                   <RowDefinition Height="147*"/>
                 </Grid.RowDefinitions>
                 <GroupBox x:Name="Work9Box" Grid.Column="0" Header="Arbeitsplatz 9">
-                  <DataGrid Name="dataGrid9" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FF8CDCE4">
+                  <DataGrid Name="dataGrid9" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFFFFFFF">
                     <DataGrid.Columns >
                       <DataGridTextColumn x:Name="Plan9Box_Bezeichnung" Header="Dummy" Binding="{Binding Bezeichnung}"></DataGridTextColumn>
                       <DataGridTextColumn x:Name="Plan9Box_Fahrradtyp" Header="Last Name" Binding="{Binding Fahrradtyp}"></DataGridTextColumn>
@@ -1145,7 +1203,7 @@
                   </DataGrid>
                 </GroupBox>
                 <GroupBox x:Name="Plan9Box" Grid.Row="1" Grid.Column="0" Header="Kapazitätsplanung Arbeitsplatz 9">
-                  <DataGrid Name="dataGrid23" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FF8CDCE4">
+                  <DataGrid Name="dataGrid23" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFFFFFFF">
                     <DataGrid.Columns >
                       <DataGridTextColumn x:Name="Plan9Box_Kapaplanwork" Header="Dummy" Binding="{Binding Kapaplanwork}"></DataGridTextColumn>
                       <DataGridTextColumn x:Name="Plan9Box_Berechnungwork" Header="Last Name" Binding="{Binding Berechnungwork}"></DataGridTextColumn>
@@ -1162,7 +1220,7 @@
                   <RowDefinition Height="147*"/>
                 </Grid.RowDefinitions>
                 <GroupBox x:Name="Work10Box" Grid.Column="0" Header="Arbeitsplatz 10">
-                  <DataGrid Name="dataGrid10" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FF8CDCE4">
+                  <DataGrid Name="dataGrid10" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFFFFFFF">
                     <DataGrid.Columns >
                       <DataGridTextColumn x:Name="Plan10Box_Bezeichnung" Header="Dummy" Binding="{Binding Bezeichnung}"></DataGridTextColumn>
                       <DataGridTextColumn x:Name="Plan10Box_Fahrradtyp" Header="Last Name" Binding="{Binding Fahrradtyp}"></DataGridTextColumn>
@@ -1174,7 +1232,7 @@
                   </DataGrid>
                 </GroupBox>
                 <GroupBox x:Name="Plan10Box" Grid.Row="1" Grid.Column="0" Header="Kapazitätsplanung Arbeitsplatz 10">
-                  <DataGrid Name="dataGrid24" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FF8CDCE4">
+                  <DataGrid Name="dataGrid24" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFFFFFFF">
                     <DataGrid.Columns >
                       <DataGridTextColumn x:Name="Plan10Box_Kapaplanwork" Header="Dummy" Binding="{Binding Kapaplanwork}"></DataGridTextColumn>
                       <DataGridTextColumn x:Name="Plan10Box_Berechnungwork" Header="Last Name" Binding="{Binding Berechnungwork}"></DataGridTextColumn>
@@ -1191,7 +1249,7 @@
                   <RowDefinition Height="147*"/>
                 </Grid.RowDefinitions>
                 <GroupBox x:Name="Work11Box" Grid.Column="0" Header="Arbeitsplatz 11">
-                  <DataGrid Name="dataGrid11" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FF8CDCE4">
+                  <DataGrid Name="dataGrid11" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFFFFFFF">
                     <DataGrid.Columns >
                       <DataGridTextColumn x:Name="Plan11Box_Bezeichnung" Header="Dummy" Binding="{Binding Bezeichnung}"></DataGridTextColumn>
                       <DataGridTextColumn x:Name="Plan11Box_Fahrradtyp" Header="Last Name" Binding="{Binding Fahrradtyp}"></DataGridTextColumn>
@@ -1203,7 +1261,7 @@
                   </DataGrid>
                 </GroupBox>
                 <GroupBox x:Name="Plan11Box" Grid.Row="1" Grid.Column="0" Header="Kapazitätsplanung Arbeitsplatz 11">
-                  <DataGrid Name="dataGrid25" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FF8CDCE4">
+                  <DataGrid Name="dataGrid25" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFFFFFFF">
                     <DataGrid.Columns >
                       <DataGridTextColumn x:Name="Plan11Box_Kapaplanwork" Header="Dummy" Binding="{Binding Kapaplanwork}"></DataGridTextColumn>
                       <DataGridTextColumn x:Name="Plan11Box_Berechnungwork" Header="Last Name" Binding="{Binding Berechnungwork}"></DataGridTextColumn>
@@ -1220,7 +1278,7 @@
                   <RowDefinition Height="147*"/>
                 </Grid.RowDefinitions>
                 <GroupBox x:Name="Work12Box" Grid.Column="0" Header="Arbeitsplatz 12">
-                  <DataGrid Name="dataGrid12" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FF8CDCE4">
+                  <DataGrid Name="dataGrid12" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFFFFFFF">
                     <DataGrid.Columns >
                       <DataGridTextColumn x:Name="Plan12Box_Bezeichnung" Header="Dummy" Binding="{Binding Bezeichnung}"></DataGridTextColumn>
                       <DataGridTextColumn x:Name="Plan12Box_Fahrradtyp" Header="Last Name" Binding="{Binding Fahrradtyp}"></DataGridTextColumn>
@@ -1232,7 +1290,7 @@
                   </DataGrid>
                 </GroupBox>
                 <GroupBox x:Name="Plan12Box" Grid.Row="1" Grid.Column="0" Header="Kapazitätsplanung Arbeitsplatz 12">
-                  <DataGrid Name="dataGrid26" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FF8CDCE4">
+                  <DataGrid Name="dataGrid26" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFFFFFFF">
                     <DataGrid.Columns >
                       <DataGridTextColumn x:Name="Plan12Box_Kapaplanwork" Header="Dummy" Binding="{Binding Kapaplanwork}"></DataGridTextColumn>
                       <DataGridTextColumn x:Name="Plan12Box_Berechnungwork" Header="Last Name" Binding="{Binding Berechnungwork}"></DataGridTextColumn>
@@ -1249,7 +1307,7 @@
                   <RowDefinition Height="147*"/>
                 </Grid.RowDefinitions>
                 <GroupBox x:Name="Work13Box" Grid.Column="0" Header="Arbeitsplatz 13">
-                  <DataGrid Name="dataGrid13" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FF8CDCE4">
+                  <DataGrid Name="dataGrid13" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFFFFFFF">
                     <DataGrid.Columns >
                       <DataGridTextColumn x:Name="Plan13Box_Bezeichnung" Header="Dummy" Binding="{Binding Bezeichnung}"></DataGridTextColumn>
                       <DataGridTextColumn x:Name="Plan13Box_Fahrradtyp" Header="Last Name" Binding="{Binding Fahrradtyp}"></DataGridTextColumn>
@@ -1261,7 +1319,7 @@
                   </DataGrid>
                 </GroupBox>
                 <GroupBox x:Name="Plan13Box" Grid.Row="1" Grid.Column="0" Header="Kapazitätsplanung Arbeitsplatz 13">
-                  <DataGrid Name="dataGrid27" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FF8CDCE4">
+                  <DataGrid Name="dataGrid27" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFFFFFFF">
                     <DataGrid.Columns >
                       <DataGridTextColumn x:Name="Plan13Box_Kapaplanwork" Header="Dummy" Binding="{Binding Kapaplanwork}"></DataGridTextColumn>
                       <DataGridTextColumn x:Name="Plan13Box_Berechnungwork" Header="Last Name" Binding="{Binding Berechnungwork}"></DataGridTextColumn>
@@ -1278,7 +1336,7 @@
                   <RowDefinition Height="147*"/>
                 </Grid.RowDefinitions>
                 <GroupBox x:Name="Work14Box" Grid.Column="0" Header="Arbeitsplatz 14">
-                  <DataGrid Name="dataGrid14" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FF8CDCE4">
+                  <DataGrid Name="dataGrid14" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFFFFFFF">
                     <DataGrid.Columns >
                       <DataGridTextColumn x:Name="Plan14Box_Bezeichnung" Header="Dummy" Binding="{Binding Bezeichnung}"></DataGridTextColumn>
                       <DataGridTextColumn x:Name="Plan14Box_Fahrradtyp" Header="Last Name" Binding="{Binding Fahrradtyp}"></DataGridTextColumn>
@@ -1290,7 +1348,7 @@
                   </DataGrid>
                 </GroupBox>
                 <GroupBox x:Name="Plan14Box" Grid.Row="1" Grid.Column="0" Header="Kapazitätsplanung Arbeitsplatz 14">
-                  <DataGrid Name="dataGrid28" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FF8CDCE4">
+                  <DataGrid Name="dataGrid28" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFFFFFFF">
                     <DataGrid.Columns >
                       <DataGridTextColumn x:Name="Plan14Box_Kapaplanwork" Header="Dummy" Binding="{Binding Kapaplanwork}"></DataGridTextColumn>
                       <DataGridTextColumn x:Name="Plan14Box_Berechnungwork" Header="Last Name" Binding="{Binding Berechnungwork}"></DataGridTextColumn>
@@ -1307,7 +1365,7 @@
                   <RowDefinition Height="147*"/>
                 </Grid.RowDefinitions>
                 <GroupBox x:Name="Work15Box" Grid.Column="0" Header="Arbeitsplatz 15">
-                  <DataGrid Name="dataGrid15" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FF8CDCE4">
+                  <DataGrid Name="dataGrid15" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFFFFFFF">
                     <DataGrid.Columns >
                       <DataGridTextColumn x:Name="Plan15Box_Bezeichnung" Header="Dummy" Binding="{Binding Bezeichnung}"></DataGridTextColumn>
                       <DataGridTextColumn x:Name="Plan15Box_Fahrradtyp" Header="Last Name" Binding="{Binding Fahrradtyp}"></DataGridTextColumn>
@@ -1319,7 +1377,7 @@
                   </DataGrid>
                 </GroupBox>
                 <GroupBox x:Name="Plan15Box" Grid.Row="1" Grid.Column="0" Header="Kapazitätsplanung Arbeitsplatz 15">
-                  <DataGrid Name="dataGrid29" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FF8CDCE4">
+                  <DataGrid Name="dataGrid29" Margin="2" AutoGenerateColumns="False" IsReadOnly="True" Background="#FFFFFFFF">
                     <DataGrid.Columns >
                       <DataGridTextColumn x:Name="Plan15Box_Kapaplanwork" Header="Dummy" Binding="{Binding Kapaplanwork}"></DataGridTextColumn>
                       <DataGridTextColumn x:Name="Plan15Box_Berechnungwork" Header="Last Name" Binding="{Binding Berechnungwork}"></DataGridTextColumn>
@@ -1338,7 +1396,7 @@
         <TabItem.Background>
           <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
             <GradientStop Color="#FFF0F0F0" Offset="0"/>
-            <GradientStop Color="#FFFFE3F1" Offset="1"/>
+            <GradientStop Color="#FFE7BD23" Offset="1"/>
           </LinearGradientBrush>
         </TabItem.Background>
         <Grid Background="#FFE5E5E5">
@@ -1346,12 +1404,12 @@
             <ColumnDefinition Width="15*"/>
             <ColumnDefinition Width="619*"/>
           </Grid.ColumnDefinitions>
-          <TabControl TabStripPlacement="Left" Background="#FF8CDCE4" Grid.ColumnSpan="2">
+          <TabControl TabStripPlacement="Left" Background="#FF00489D" Grid.ColumnSpan="2">
             <TabItem x:Name="Bestell" Header="Bestellübersicht">
               <TabItem.Background>
                 <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                   <GradientStop Color="#FFF0F0F0" Offset="0"/>
-                  <GradientStop Color="#FFFFE3F1" Offset="1"/>
+                  <GradientStop Color="#FFE7BD23" Offset="1"/>
                 </LinearGradientBrush>
               </TabItem.Background>
               <Grid>
@@ -1359,7 +1417,7 @@
                   <ColumnDefinition Width="446*"/>
                   <ColumnDefinition Width="717*"/>
                 </Grid.ColumnDefinitions>
-                <DataGrid Name="dataGrid31" Margin="2" CellEditEnding="UpdateEinkaufXML"  AutoGenerateColumns="False" IsReadOnly="False" Background="#FF8CDCE4" Grid.ColumnSpan="2">
+                <DataGrid Name="dataGrid31" Margin="2" CellEditEnding="UpdateEinkaufXML"  AutoGenerateColumns="False" IsReadOnly="False" Background="#FFFFFFFF" Grid.ColumnSpan="2">
                   <DataGrid.Columns >
                     <DataGridTextColumn x:Name="Bestell1_Teileno" Header="Dummy" IsReadOnly="True" Binding="{Binding Teileno}"></DataGridTextColumn>
                     <DataGridTextColumn x:Name="Bestell1_Anzahl" Header="Last Name" Binding="{Binding Anzahl}"></DataGridTextColumn>
@@ -1371,7 +1429,7 @@
 
             <TabItem x:Name="Stammdaten" Header="Stammdaten">
               <Grid>
-                <DataGrid Name="dataGrid30" Margin="2" IsReadOnly="True" AutoGenerateColumns="False" Background="#FF8CDCE4">
+                <DataGrid Name="dataGrid30" Margin="2" IsReadOnly="True" AutoGenerateColumns="False" Background="White">
                   <DataGrid.Columns >
                     <DataGridTextColumn x:Name="Liefer1_Lieferfrist" Header="Last Name" Binding="{Binding Lieferfrist}"></DataGridTextColumn>
                     <DataGridTextColumn x:Name="Liefer1_Abweichung" Header="Last Name" Binding="{Binding Abweichung}"></DataGridTextColumn>
@@ -1388,7 +1446,11 @@
 
             <TabItem x:Name="Lagerbestand" Header="Lagerbestand">
               <Grid>
-                <DataGrid Name="dataGrid32" Margin="2" IsReadOnly="True" AutoGenerateColumns="False" Background="#FF8CDCE4">
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="228*"/>
+                  <ColumnDefinition Width="935*"/>
+                </Grid.ColumnDefinitions>
+                <DataGrid Name="dataGrid32" Margin="2,2,2.111,51.778" IsReadOnly="True" AutoGenerateColumns="False" Background="White" Grid.ColumnSpan="2">
                   <DataGrid.Columns >
                     <DataGridTextColumn x:Name="Lager1_Artikel" Header="Last Name" Binding="{Binding Artikel}"></DataGridTextColumn>
                     <DataGridTextColumn x:Name="Lager1_Menge" Header="Last Name" Binding="{Binding Menge}"></DataGridTextColumn>
@@ -1398,6 +1460,8 @@
                     <DataGridTextColumn x:Name="Lager1_Lagerwert" Header="Last Name" Binding="{Binding Lagerwert}"></DataGridTextColumn>
                   </DataGrid.Columns>
                 </DataGrid>
+                <TextBox x:Name="Gesamtlagerbestand" HorizontalAlignment="Left" Height="32" Margin="10,596,0,0" TextWrapping="Wrap" Text="lagerbestand" VerticalAlignment="Top" Width="185" IsEnabled="False" Grid.Column="1" FontSize="24" SelectionBrush="White"/>
+                <Label x:Name="GesLagerbestand" Content="Label" HorizontalAlignment="Left" Margin="10,591,0,0" VerticalAlignment="Top" Width="208" Height="38" FontSize="24" Foreground="White" />
               </Grid>
             </TabItem>
           </TabControl>
@@ -1409,42 +1473,104 @@
         <TabItem.Background>
           <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
             <GradientStop Color="#FFF0F0F0" Offset="0"/>
-            <GradientStop Color="#FFFFE3F1" Offset="1"/>
+            <GradientStop Color="#FFE7BD23" Offset="1"/>
           </LinearGradientBrush>
         </TabItem.Background>
-        <Grid Background="#FF8CDCE4">
-          <DataGrid Height="287" HorizontalAlignment="Left" Margin="93,12,0,0"  Name="prio" VerticalAlignment="Top" Width="500" IsReadOnly="True" AutoGenerateColumns="False" Background="#FF8CDCE4">
+        <Grid>
+          <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+              <GradientStop Color="White" Offset="0.768"/>
+              <GradientStop Color="#FF00489D" Offset="1"/>
+              <GradientStop Color="#FF99B6D8" Offset="0.887"/>
+              <GradientStop Color="#FFCEDCEC" Offset="0.84"/>
+            </LinearGradientBrush>
+          </Grid.Background>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="332*"/>
+            <ColumnDefinition Width="877*"/>
+            <ColumnDefinition Width="59*"/>
+          </Grid.ColumnDefinitions>
+          <DataGrid Height="287" HorizontalAlignment="Left" Margin="93,12,0,0"  Name="prio" VerticalAlignment="Top" Width="500" IsReadOnly="True" AutoGenerateColumns="False" Background="White" Grid.ColumnSpan="2">
             <DataGrid.Columns >
               <DataGridTextColumn x:Name="Prio1_Position" Header="Last Name" Binding="{Binding Position}"></DataGridTextColumn>
               <DataGridTextColumn x:Name="Prio1_Teilenr" Header="Last Name" Binding="{Binding Teilenr}"></DataGridTextColumn>
               <DataGridTextColumn x:Name="Prio1_Anzahl" Header="Last Name" Binding="{Binding Anzahl}"></DataGridTextColumn>
             </DataGrid.Columns>
           </DataGrid>
-          <Button Content="up" Height="23" HorizontalAlignment="Left" Margin="628,50,0,0" x:Name="up" VerticalAlignment="Top" Width="75" Click="up_Click" />
-          <Button Content="down" Height="23" HorizontalAlignment="Left" Margin="628,90,0,0" x:Name="down" VerticalAlignment="Top" Width="75" Click="down_Click"  />
-          <Button Content="delete" Height="23" HorizontalAlignment="Left" Margin="628,170,0,0" x:Name="delete" VerticalAlignment="Top" Width="75" Click="delete_Click"  />
-          <Button Content="add" Height="23" HorizontalAlignment="Left" Margin="628,340,0,0" x:Name="add" VerticalAlignment="Top" Width="75" Click="add_Click"  />
-          <Button Content="split" Height="23" HorizontalAlignment="Left" Margin="628,130,0,0" x:Name="split" VerticalAlignment="Top" Width="75" Click="split_Click"  />
-          <TextBox x:Name="prioAddItem" HorizontalAlignment="Left" Height="23" Margin="93,340,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TabIndex="4" TextChanged="Forecast1_TextChanged" PreviewTextInput="NumberIntValidationTextBox" />
-          <TextBox x:Name="prioAddAmount" HorizontalAlignment="Left" Height="23" Margin="274,340,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TabIndex="4" TextChanged="Forecast1_TextChanged" PreviewTextInput="NumberIntValidationTextBox" />
+          <Button Content="up" Height="23" HorizontalAlignment="Left" Margin="320,45,0,0" x:Name="up" VerticalAlignment="Top" Width="75" Click="up_Click" Grid.Column="1" />
+          <Button Content="down" Height="23" HorizontalAlignment="Left" Margin="320,85,0,0" x:Name="down" VerticalAlignment="Top" Width="75" Click="down_Click" Grid.Column="1"  />
+          <Button Content="delete" Height="23" HorizontalAlignment="Left" Margin="320,261,0,0" x:Name="delete" VerticalAlignment="Top" Width="75" Click="delete_Click" Grid.Column="1"  />
+          <Button Content="add" Height="23" HorizontalAlignment="Left" Margin="320,340,0,0" x:Name="add" VerticalAlignment="Top" Width="75" Click="add_Click" Grid.Column="1"  />
+          <Button Content="split" Height="23" HorizontalAlignment="Left" Margin="320,175,0,0" x:Name="split" VerticalAlignment="Top" Width="75" Click="split_Click" Grid.Column="1"  />
+          <TextBox x:Name="prioAddItem" HorizontalAlignment="Left" Height="23" Margin="93,340,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="229" TabIndex="4" TextChanged="Forecast1_TextChanged" PreviewTextInput="NumberIntValidationTextBox" />
+          <TextBox x:Name="prioAddAmount" HorizontalAlignment="Left" Height="23" Margin="10,340,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="251" TabIndex="4" TextChanged="Forecast1_TextChanged" PreviewTextInput="NumberIntValidationTextBox" Grid.Column="1" />
           <Label x:Name="prioAddItemDescription" Content="Item:" HorizontalAlignment="Left" Margin="93,309,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.02,-5.231"/>
-          <Label x:Name="prioAddAmountDescription" Content="Anzahl:" HorizontalAlignment="Left" Margin="274,309,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.02,-5.231"/>
+          <Label x:Name="prioAddAmountDescription" Content="Anzahl:" HorizontalAlignment="Left" Margin="10,309,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.02,-5.231" Grid.Column="1"/>
+          <Image Grid.Column="1" HorizontalAlignment="Left" Height="17" Margin="279,46,0,0" VerticalAlignment="Top" Width="31" Source="Pfeil.jpg" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+              <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="-90.24"/>
+                <TranslateTransform/>
+              </TransformGroup>
+            </Image.RenderTransform>
+          </Image>
+          <Image Grid.Column="1" HorizontalAlignment="Left" Height="20" Margin="289,341,0,0" VerticalAlignment="Top" Width="34" Source="Add.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+              <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="-90.24"/>
+                <TranslateTransform/>
+              </TransformGroup>
+            </Image.RenderTransform>
+          </Image>
+          <Image Grid.Column="1" HorizontalAlignment="Left" Height="17" Margin="280,87,0,0" VerticalAlignment="Top" Width="31" Source="Pfeil.jpg" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+              <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="-269.799"/>
+                <TranslateTransform/>
+              </TransformGroup>
+            </Image.RenderTransform>
+          </Image>
+          <Image Grid.Column="1" HorizontalAlignment="Left" Height="19" Margin="285,263,0,0" VerticalAlignment="Top" Width="29" Source="X.jpg"/>
+          <Image Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="287,175,0,0" VerticalAlignment="Top" Width="23" Source="Schere.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+              <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="-180.239"/>
+                <TranslateTransform/>
+              </TransformGroup>
+            </Image.RenderTransform>
+          </Image>
         </Grid>
       </TabItem>
       <TabItem x:Name="Exporttab" Header="Export" IsEnabled="False" TabIndex="8" Height="20" Margin="-1.889,-2,-2.444,-0.222" VerticalAlignment="Bottom" Width="141">
         <TabItem.Background>
           <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
             <GradientStop Color="#FFF0F0F0" Offset="0"/>
-            <GradientStop Color="#FFFFE3F1" Offset="1"/>
+            <GradientStop Color="#FFE7BD23" Offset="1"/>
           </LinearGradientBrush>
         </TabItem.Background>
-        <Grid Background="#FF8CDCE4">
+        <Grid>
+          <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+              <GradientStop Color="White" Offset="0.768"/>
+              <GradientStop Color="#FF00489D" Offset="1"/>
+              <GradientStop Color="#FF99B6D8" Offset="0.887"/>
+              <GradientStop Color="#FFCEDCEC" Offset="0.84"/>
+            </LinearGradientBrush>
+          </Grid.Background>
           <Grid.ColumnDefinitions>
             <ColumnDefinition Width="323*"/>
             <ColumnDefinition Width="945*"/>
           </Grid.ColumnDefinitions>
-          <Button x:Name="xmlexportbutton" Content="XML Export" HorizontalAlignment="Left" Margin="131,132,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" IsEnabled="False"/>
-          <TextBox x:Name="customexportpathtextbox" HorizontalAlignment="Left" Height="23" Margin="86,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="True" TextChanged="customexportpathtextbox_TextChanged"/>
+          <Button x:Name="xmlexportbutton" Content="XML Export" HorizontalAlignment="Left" Margin="811.889,104,0,0" VerticalAlignment="Top" Width="95" Click="Button_Click" IsEnabled="True" Grid.Column="1" Height="23"/>
+          <TextBox x:Name="customexportpathtextbox" HorizontalAlignment="Left" Height="23" Margin="86,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="1008" IsEnabled="True" TextChanged="customexportpathtextbox_TextChanged" Grid.ColumnSpan="2"/>
           <Label x:Name="Exportlabel" Content="Exportpath:" HorizontalAlignment="Left" Margin="10,101,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.178,-0.403"/>
         </Grid>
       </TabItem>

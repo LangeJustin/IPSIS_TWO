@@ -193,11 +193,16 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Schere.png" />
+    <Resource Include="X.jpg" />
+    <Resource Include="Pfeil.jpg" />
     <Resource Include="favicon.ico" />
+    <Resource Include="IBSYS2_Logo.PNG" />
+    <Resource Include="front_page.jpg" />
     <Resource Include="Pages\Settings\Translate.png" />
     <Resource Include="Pages\About\Help.png" />
     <Resource Include="Planung.jpg" />
-    <Resource Include="Fahrradkette.jpg" />
+    <Resource Include="Add.png" />
     <Content Include="De.TorstenMandelkow.MetroChart.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
