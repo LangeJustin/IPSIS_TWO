@@ -28,7 +28,7 @@ namespace Ibsys2.Pages.About {
     }
 
     private void Button_Click(object sender, RoutedEventArgs e) {
-      System.Diagnostics.Process.Start("https://weberniklas.github.io/ibsys/#");
+      System.Diagnostics.Process.Start("http://flowr.online/");
     }
   }
 }
